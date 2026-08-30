@@ -168,6 +168,9 @@
 
   #kopi-status { font-size: 0.85em; color: #6b6b6b; margin-left: 8px; }
 
+  .tilbage-link { font-size: 0.85em; color: #6b6b6b; margin: 14px 0 0; }
+  .tilbage-link a { color: #6b6b6b; }
+
   /* ---- Computer: mere luft, en løftet kortfølelse, samme opbygning ---- */
   @media (min-width: 700px) {
     body { padding: 64px 24px; }
@@ -591,6 +594,7 @@
       <button class="knap" onclick="kopierResultat()">Kopiér resultat</button>
       <span id="kopi-status"></span>
       <p class="besked">Kom tilbage i morgen for fem nye sange.</p>
+      <button class="afspil-knap" onclick="startBonusRunde()">🔁 Spil videre</button>
       ${recap}
     `;
   }
@@ -640,6 +644,195 @@
     event.preventDefault();
     const foersteKnap = document.querySelector("#forslag-liste button");
     if (foersteKnap) vaelgForslag(foersteKnap.dataset.titel);
+  }
+
+  // ---- "Spil videre": valgfrie bonusrunder efter dagens 5 ----
+  // Adskilt fra dagens-sang-flowet foroven: intet her gemmes i
+  // localStorage, tæller ikke med i det delte resultat, og har ikke sit
+  // eget emoji-grid (Emil bad om at det bare skal være for sjov). Hvilke
+  // sange man allerede har fået i dag (dagens 5 + tidligere bonusrunder)
+  // huskes kun i hukommelsen, så en genindlæsning af siden nulstiller
+  // bonus-historikken — men aldrig dagens 5, de undgås altid.
+  const bonusState = {
+    sange: [],
+    indexIBatch: 0,
+    trinIndex: 0,
+    afsloeret: false,
+    nuvaerendeSang: null,
+  };
+  let bonusSpilTimeout = null;
+  const bonusHoerteIder = new Set();
+
+  function vaelgBonusSange() {
+    let pulje = SANGE.filter(s => !bonusHoerteIder.has(s.id));
+    // Puljen løbet tør (eller tæt på) — start forfra, men behold stadig
+    // udelukkelsen af dagens 5, så man ikke straks får dem igen.
+    if (pulje.length < SANGE_PER_DAG) {
+      bonusHoerteIder.clear();
+      state.dagensSange.forEach(s => bonusHoerteIder.add(s.id));
+      pulje = SANGE.filter(s => !bonusHoerteIder.has(s.id));
+    }
+    const blandet = [...pulje];
+    for (let i = blandet.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [blandet[i], blandet[j]] = [blandet[j], blandet[i]];
+    }
+    return blandet.slice(0, Math.min(SANGE_PER_DAG, blandet.length));
+  }
+
+  function startBonusRunde() {
+    if (bonusHoerteIder.size === 0) {
+      state.dagensSange.forEach(s => bonusHoerteIder.add(s.id));
+    }
+    bonusState.sange = vaelgBonusSange();
+    bonusState.indexIBatch = 0;
+    if (bonusState.sange.length === 0) {
+      document.getElementById("spil").innerHTML = `
+        <p class="besked">Ikke flere sange i puljen lige nu.</p>
+        <p class="tilbage-link"><a href="#" onclick="visDagensResultat(); return false;">← Tilbage til dagens resultat</a></p>
+      `;
+      return;
+    }
+    startBonusSang();
+  }
+
+  function startBonusSang() {
+    bonusState.trinIndex = 0;
+    bonusState.afsloeret = false;
+    bonusState.nuvaerendeSang = bonusState.sange[bonusState.indexIBatch];
+    const audio = document.getElementById("afspiller");
+    audio.src = bonusState.nuvaerendeSang.lyd_url;
+    renderBonus();
+  }
+
+  function spilBonusKlip() {
+    const audio = document.getElementById("afspiller");
+    const varighed = KLIP_TRIN[bonusState.trinIndex];
+    const startpunkt = (bonusState.nuvaerendeSang.start_offset_ms || 0) / 1000;
+    clearTimeout(bonusSpilTimeout);
+    audio.currentTime = startpunkt;
+    audio.play().catch(e => console.error("Kunne ikke afspille", e));
+    bonusSpilTimeout = setTimeout(() => audio.pause(), varighed * 1000);
+  }
+
+  function gaetBonusIndsendt(vaerdi) {
+    if (bonusState.afsloeret) return;
+    const gaet = normaliser(vaerdi);
+    if (gaet.length === 0) return;
+    const sang = bonusState.nuvaerendeSang;
+    const gyldigeTitler = [sang.titel, ...(sang.alternative_titler || [])].map(normaliser);
+    if (gyldigeTitler.includes(gaet)) {
+      afslutBonusSang(true);
+    } else {
+      naesteBonusTrin("forkert");
+    }
+  }
+
+  function springBonusOver() {
+    if (bonusState.afsloeret) return;
+    naesteBonusTrin("sprunget-over");
+  }
+
+  function naesteBonusTrin(besked) {
+    const audio = document.getElementById("afspiller");
+    audio.pause();
+    if (bonusState.trinIndex < KLIP_TRIN.length - 1) {
+      bonusState.trinIndex++;
+      renderBonus(besked);
+    } else {
+      afslutBonusSang(false);
+    }
+  }
+
+  function afslutBonusSang(gaettetRigtigt) {
+    const audio = document.getElementById("afspiller");
+    audio.pause();
+    bonusState.afsloeret = true;
+    bonusHoerteIder.add(bonusState.nuvaerendeSang.id);
+    renderBonusAfsloering(gaettetRigtigt);
+  }
+
+  function naesteBonusSang() {
+    bonusState.indexIBatch++;
+    startBonusSang();
+  }
+
+  function visDagensResultat() {
+    const gemt = hentGemtResultat();
+    if (gemt) renderSamletResultat(gemt);
+  }
+
+  function renderBonus(besked) {
+    const el = document.getElementById("spil");
+    const varighed = KLIP_TRIN[bonusState.trinIndex];
+    let html = `
+      <p class="dagstal">Spil videre — sang ${bonusState.indexIBatch + 1} af ${bonusState.sange.length}</p>
+      <p class="klip-info">Klip ${bonusState.trinIndex + 1} af ${KLIP_TRIN.length}: ${varighed} sekund${varighed === 1 ? "" : "er"}</p>
+      <button class="afspil-knap" onclick="spilBonusKlip()">▶ Afspil klip</button>
+    `;
+
+    if (besked === "forkert") html += `<p class="besked">Forkert. Næste klip er længere.</p>`;
+    if (besked === "sprunget-over") html += `<p class="besked">Sprunget over. Næste klip er længere.</p>`;
+
+    html += `
+      <div>
+        <input id="bonus-gaet-input" class="gaet-felt" type="text" placeholder="Skriv en sangtitel…" autocomplete="off"
+               oninput="opdaterBonusForslag(this.value)" onkeydown="haandterBonusTast(event)">
+        <div id="bonus-forslag-liste" class="forslag"></div>
+        <button class="spring-over" onclick="springBonusOver()">Spring over</button>
+      </div>
+      <p class="tilbage-link"><a href="#" onclick="visDagensResultat(); return false;">← Tilbage til dagens resultat</a></p>
+    `;
+
+    el.innerHTML = html;
+    const input = document.getElementById("bonus-gaet-input");
+    if (input) {
+      input.focus();
+      opdaterBonusForslag("");
+    }
+  }
+
+  function renderBonusAfsloering(gaettetRigtigt) {
+    const sang = bonusState.nuvaerendeSang;
+    const el = document.getElementById("spil");
+    const erSidsteISvaeret = bonusState.indexIBatch >= bonusState.sange.length - 1;
+    const besked = gaettetRigtigt ? "Rigtigt!" : "Ikke gættet.";
+    el.innerHTML = `
+      <p class="besked">${besked} Det var <strong>${escapeHtml(sang.titel)}</strong> — ${escapeHtml(sang.kunstner)}.</p>
+      <button class="knap" onclick="${erSidsteISvaeret ? "startBonusRunde()" : "naesteBonusSang()"}">${erSidsteISvaeret ? "🔁 Spil videre" : "Næste sang"}</button>
+      <p class="tilbage-link"><a href="#" onclick="visDagensResultat(); return false;">← Tilbage til dagens resultat</a></p>
+    `;
+  }
+
+  // ---- Søgeforslag til "spil videre" — samme søgning som ovenfor
+  // (findForslag), matcher hele sangpuljen, ikke kun bonusrundens 5 ----
+  function opdaterBonusForslag(tekst) {
+    const liste = document.getElementById("bonus-forslag-liste");
+    if (!liste) return;
+    const q = normaliser(tekst);
+    if (q.length === 0) {
+      liste.innerHTML = "";
+      return;
+    }
+    const forslag = findForslag(tekst);
+    if (forslag.length === 0) {
+      liste.innerHTML = `<p class="ingen-match">Ingen sange matcher.</p>`;
+      return;
+    }
+    liste.innerHTML = forslag
+      .map(s => `<button type="button" class="forslag-knap" data-titel="${escapeHtml(s.titel)}" onclick="vaelgBonusForslag(this.dataset.titel)">${escapeHtml(s.titel)} — ${escapeHtml(s.kunstner)}</button>`)
+      .join("");
+  }
+
+  function vaelgBonusForslag(titel) {
+    gaetBonusIndsendt(titel);
+  }
+
+  function haandterBonusTast(event) {
+    if (event.key !== "Enter") return;
+    event.preventDefault();
+    const foersteKnap = document.querySelector("#bonus-forslag-liste button");
+    if (foersteKnap) vaelgBonusForslag(foersteKnap.dataset.titel);
   }
 
   // Sikkerhedsnet: hvis siden af en eller anden grund aldrig kommer i gang
