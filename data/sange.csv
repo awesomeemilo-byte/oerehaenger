@@ -1,11 +1,739 @@
 titel,kunstner,svaerhed,noter
-"Barbie Girl","Aqua",1,"Alle kender den. God som allerførste runde."
-"Kun for mig","Medina",1,"Radiohit man ikke kan undgå at kende"
-"Sleeping My Day Away","D-A-D",2,"Riffet er genkendeligt på et halvt sekund"
-"Bag duggede ruder","TV-2",2,"Alle kan omkvædet — færre kan titlen"
-"Costa Kalundborg","Shu-bi-dua",2,"Titlen er nem hvis man først hører omkvædet"
-"Hot!","Nik & Jay",2,"2000'erne, folkeskolediskotek"
-"7 Years","Lukas Graham",1,"Dansk kunstner, engelsk sprog — afhænger af vores definition"
-"Stor mand","Tobias Rahim",2,"Nyere. Test om det er for nyt til de ældre spillere."
-"Kvinde min","Gasolin'",3,"Klassiker — svær for de yngste. Husk apostroffen i kunstnernavnet."
-"Den jeg er","Rasmus Seebach",2,"Ren radiopop, meget genkendelig"
+Barbie Girl,Aqua,1,Alle kender den. God som allerførste runde.
+Kun for mig,Medina,1,Radiohit man ikke kan undgå at kende
+Sleeping My Day Away,D-A-D,2,Riffet er genkendeligt på et halvt sekund
+Bag duggede ruder,TV-2,1,Alle kan omkvædet — færre kan titlen
+Costa Kalundborg,Shu-bi-dua,2,Titlen er nem hvis man først hører omkvædet
+Hot!,Nik & Jay,2,"2000'erne, folkeskolediskotek"
+7 Years,Lukas Graham,1,"Dansk kunstner, engelsk sprog — afhænger af vores definition"
+Stor mand,Tobias Rahim,3,Nyere. Test om det er for nyt til de ældre spillere.
+Kvinde min,Gasolin',1,Klassiker — svær for de yngste. Husk apostroffen i kunstnernavnet.
+Den jeg er,Rasmus Seebach,2,"Ren radiopop, meget genkendelig"
+Rabalderstræde,Gasolin',2,Klassiker fra Gasolin'-tiden
+This Is My Life,Gasolin',2,Gasolin'-klassiker
+Langebro,Kim Larsen,1,Kim Larsen-klassiker
+Midt om natten,Kim Larsen,1,"Titelnummer, kæmpe klassiker"
+Sømand ombord,Kim Larsen,2,Kim Larsen-klassiker
+Om lidt,Kim Larsen,2,"Kim Larsen solo, kæmpe klassiker"
+Hos mig,Kim Larsen,2,Kim Larsen-klassiker
+Sønner af jorden,Kim Larsen,2,Kim Larsen-klassiker
+Papirsklip,Kim Larsen,1,"Kim Larsen-klassiker, karaokefavorit"
+Susan Himmelblå,Kim Larsen,2,Kim Larsen-klassiker
+Kloden drejer,Anne Linnet,2,Dansk sang-klassiker
+Forårsdag,Anne Linnet,2,Anne Linnet-klassiker
+Barndommens gade,Anne Linnet,2,Anne Linnet-klassiker (Tove Ditlevsen-tekst)
+Camping Copenhagen,Shu-bi-dua,2,Satirisk klassiker
+Hvalen Hvalborg,Shu-bi-dua,2,Shu-bi-dua-klassiker
+Står på en alpetop,Shu-bi-dua,2,Shu-bi-dua-klassiker
+Den røde tråd,Shu-bi-dua,2,Shu-bi-dua-klassiker
+Sku' Du Møde Min Far,Sanne Salomonsen,2,Kendt dansk rock-klassiker
+"Den jeg elsker, elsker jeg",Sanne Salomonsen,2,Sanne Salomonsen-klassiker
+Taxa,Sanne Salomonsen,2,Sanne Salomonsen-klassiker
+White Horse,Laid Back,3,"Dansk duo, internationalt kæmpehit"
+Kaskelot,Michael Falch,3,Kendt dansk rock-hit
+Halte Haralds Vandresang,TV-2,2,TV-2-klassiker
+Venner,TV-2,2,TV-2-klassiker
+De første kærester på månen,TV-2,2,TV-2-klassiker
+Kald det kærlighed,Lars Lilholt Band,3,Kendt dansk 90'er-hit
+Vikingerne,Kashmir,2,Tidlig Kashmir-klassiker
+Rocket Brothers,Kashmir,2,Kashmir-hit
+Kun med dig,Lars H.U.G.,3,Kendt dansk 80'er-hit
+Natsværmer,Lars H.U.G.,3,Lars H.U.G.-klassiker
+Dansevise,Grethe og Jørgen Ingmann,1,"Eurovision-vinder 1963, evig klassiker"
+Jeg vil la' lyset brænde,Ray Dee Ohh,4,Kendt dansk festhit
+Kom tilbage nu,Danseorkestret,4,Danseorkestret-klassiker
+Regndans,Danseorkestret,4,Danseorkestret-klassiker
+Stupid Man,Thomas Helmig,2,Thomas Helmig-klassiker
+Det er mig der står herude og banker på,Thomas Helmig,2,Thomas Helmig-klassiker
+Malaga,Thomas Helmig,2,Thomas Helmig-klassiker
+Yes I Know,Thomas Helmig,2,Stort dansk 90'er-hit
+Væk mig,Thomas Helmig,2,Thomas Helmig-hit
+Elsk mig i nat,Rocazino,3,Kendt dansk festhit
+Så'n nogle som os,Poul Krebs,3,Poul Krebs-klassiker
+"Morrison, Dylan og Elvis",Poul Krebs,3,Poul Krebs-hit
+Sig du kan li' mig,Tøsedrengene,4,Tøsedrengene-hit
+Bruge og bruges,Tøsedrengene,4,Tøsedrengene-hit
+Elskovspony,Johnny Deluxe,3,Kendt dansk hit
+Vågner i natten,Dodo and the Dodos,2,Dodo and the Dodos-klassiker
+Jutlandia,Gasolin',2,Gasolin'-hit
+Der er noget galt i Danmark,John Mogensen,2,John Mogensen-klassiker
+Så længe jeg lever,John Mogensen,2,John Mogensen-klassiker
+Vi maler byen rød,Birthe Kjær,2,Birthe Kjær-klassiker
+Pas på den knaldrøde gummibåd,Birthe Kjær,2,Birthe Kjær-klassiker
+Disco Tango,Tommy Seebach,2,Tommy Seebach-klassiker
+Hip Hurra det' min fødselsdag,Tommy Seebach,2,Tommy Seebach-klassiker
+En lille ring af guld,Kandis,2,Kandis' mest ikoniske hit
+Skagens Sol,Kandis,2,Kandis-klassiker
+Det' dit navn,Kandis,2,Kandis-hit
+Lonnie fra Berlin,Kandis,2,Fra Dansk Melodi Grand Prix
+Vilde Kaniner,Gnags,2,Gnags-klassiker
+Der står et billede af dig på mit bord,Rollo & King,3,Rollo & King-klassiker
+Entertaineren,C.V. Jørgensen,3,C.V. Jørgensen-klassiker
+Vårvise,Sebastian,3,Sebastian-klassiker
+København,Ulige numre,4,Kendt dansk sang
+Hvor længe vil du ydmyge dig?,Danser med Drenge,3,Bandets mest kendte sang
+Er der nogen i Himlen?,Danser med Drenge,3,Danser med Drenge-hit
+Tag godt imod ham,Danser med Drenge,3,Danser med Drenge-hit
+Grib chancen,Danser med Drenge,3,Danser med Drenge-hit
+Aldrig undvære dig,Danser med Drenge,3,Populær til bryllupper
+Sleeping Child,Michael Learns to Rock,2,Kæmpehit i 90'erne
+Saturday Night,Whigfield,1,"Dansk kunstner, verdenshit"
+Doctor Jones,Aqua,2,Endnu et Aqua-hit
+Turn Back Time,Aqua,2,Aqua-hit
+Played-A-Live,Safri Duo,2,Instrumentalt dansk verdenshit
+Livet er en kvinde,Østkyst Hustlers,5,Kendt dansk hiphop-klassiker
+Se mig,Szhirley,3,Kendt dansk hit
+Silverflame,Dizzy Mizz Lizzy,3,Dansk rock-klassiker
+Jeg troede du var hos Michael,Souvenirs,4,Kendt dansk hit
+Danmark,Tina Dickow,3,Kendt dansk sang
+Movie Klip,Nephew,2,Tidlig Nephew-klassiker
+Superliga,Nephew,2,Kendt Nephew-hit
+Hjertestarter,Nephew,2,Meget kendt festhit
+Lækker,Nik & Jay,2,Nik & Jay-klassiker
+Boing!,Nik & Jay,2,Nik & Jay-hit
+Som en engel,Nik & Jay,2,Nik & Jay-hit
+Magisk,Nik & Jay,2,Nik & Jay-hit
+En dag tilbage,Nik & Jay,2,Nik & Jay-hit
+Comforting Sounds,Mew,2,Kendt dansk indie/rock-band
+Special,Mew,2,Mew-hit
+Det Er Knud Som Er Død,The Minds of 99,3,Kendt dansk rock-hit
+Ung Kniv,The Minds of 99,3,The Minds of 99-hit
+Alle Skuffer Over Tid,The Minds of 99,3,The Minds of 99-hit
+Hurtige hænder,The Minds of 99,3,The Minds of 99-hit
+Gi' mig Danmark tilbage,Natasja,2,Kendt dansk hit
+Fascination,Alphabeat,2,Internationalt dansk gennembrud
+10.000 Nights,Alphabeat,2,Alphabeat-hit
+Boyfriend,Alphabeat,2,Alphabeat-hit
+The Spell,Alphabeat,2,Alphabeat-hit
+DJ,Alphabeat,2,Alphabeat-hit
+Hole in My Heart,Alphabeat,2,Alphabeat-hit
+Kl. 10,Medina,2,Endnu et Medina-hit
+Vi to,Medina,2,Medina-hit
+Walou,Outlandish,2,"Dansk gruppe, kæmpehit"
+Aicha,Outlandish,1,Outlandish-hit
+Farlig,Rasmus Seebach,2,Rasmus Seebach-hit
+Natteravn,Rasmus Seebach,2,Rasmus Seebach-hit
+Engel,Rasmus Seebach,1,Rasmus Seebach-hit
+I mine øjne,Rasmus Seebach,2,Rasmus Seebach-hit
+Olivia,Rasmus Seebach,2,Rasmus Seebach-hit
+Smukkest på en søndag,Joey Moe,2,Kendt dansk hit
+Told You So,Christopher,2,"Dansk kunstner, engelsk sprog"
+Twerk It Like Miley,Christopher,2,Christopher-hit
+Byen sover,Burhan G,2,Kendt Burhan G-hit
+Jeg' i live,Burhan G,2,Burhan G-hit
+Mest ondt,Burhan G,2,Burhan G-hit
+Kalder mig hjem,Burhan G,2,Burhan G-hit
+Fyraften,Suspekt,2,Kendt dansk hiphop-hit
+Gonzo,Suspekt,2,Suspekt-hit
+Kinky fætter,Suspekt,2,Suspekt-hit
+Undskyld,L.O.C.,2,L.O.C.-hit
+I Morgen Er Der Også En Dag,Andreas Odbjerg,4,Kendt dansk hit
+Mucki Bar,Tobias Rahim,2,Tobias Rahim-hit
+Flyvende Faduma,Tobias Rahim,2,Tobias Rahim-hit
+Feberdrømmer Xx Dubai,Tobias Rahim,2,Tobias Rahim-hit
+3AM,Mads Langer,3,Kendt dansk hit
+Tunnel Vision,Mads Langer,3,Mads Langer-hit
+Fact-Fiction,Mads Langer,3,Mads Langer-hit
+Golden,Brandon Beal feat. Lukas Graham,2,Stort dansk radiohit
+You're Not There,Lukas Graham,2,Lukas Graham-hit
+Mama Said,Lukas Graham,2,Lukas Graham-hit
+Final Song,MØ,2,Stort internationalt hit
+Pilgrim,MØ,2,MØ-hit
+New Moon,MØ,2,MØ-hit
+Friends,Aura Dione,1,"Dansk kunstner, verdenshit"
+Skylder dig ik' noget,L.I.G.A,4,Dansk dancehit
+From Paris to Berlin,Infernal,2,Infernal-hit
+Orale,Gilli,3,Gilli-gennembrudshit
+Vai Amor,Gilli,3,Gilli-hit
+Skarpt lys,Gilli,3,Gilli-hit
+Miami Vicer,Gilli,3,Gilli-hit
+Kender ik' i morgen,Gilli,3,Gilli-hit
+555,Gilli & Kesi,3,Kæmpe streaminghit
+La Danza,Gilli & Branco,3,Et af de mest streamede numre i DK
+Søvnløs,Kesi,3,Et af Kesis mest kendte numre
+Blå himmel,Kesi feat. Hans Philip,3,Kesi-hit
+Flad af grin,Kesi feat. Benny Jamz & Noah Carter,3,Kesi-hit
+ErruDumEllaHvad,Icekiid,3,Kendt streaminghit
+Feel It,Benny Jamz,3,Benny Jamz-hit
+Hva Snakker Du Om,Benny Jamz,3,Benny Jamz-hit
+Woodstock,Benny Jamz,3,Benny Jamz-hit
+H V D O L,Lamin,3,Lamin-hit
+Æstetisk,Lamin,3,Lamin-hit
+Solhverv,Lord Siva,4,Streaminghit
+Pub G,Lolo feat. Branco & Larry 44,3,Streaminghit
+Burnout,Calby,4,Streaminghit
+Klovne,RH,4,Streaminghit
+Bellevue,Tobias Rahim feat. D1ma,2,Danmarks mest streamede sang i 2024
+Darkroom,Tobias Rahim feat. Icekiid,2,Stort streaminghit
+Børn af natten (hola bonita),"Ankerstjerne, Panamah & Daniel Schulz",3,Stort streaminghit 2024
+Det modsatte,Mumle,4,Stort streaminghit 2024
+Knuser hjerter,Annika,3,Blandt de mest streamede kunstnere 2024/25
+Så længe jeg er sexy,Annika,3,Annika-hit
+Stolt,Annika feat. Lamin,3,Stort streaminghit 2025
+Luk mig ind,Annika,3,Annika-hit
+Bar bund,Annika feat. Gilli,3,Annika-hit
+Tak for sidst,Gobs,4,Stort streaminghit 2024
+Alt det,Thor Farlov feat. Noah Carter,3,Stort streaminghit 2024
+Smelter under månen,Aphaca,3,Stort streaminghit 2025
+En drøm om et menneske,Aphaca,3,Aphaca-hit
+Et sted hvor vi de første,Aphaca,3,Aphaca-hit
+Hele vejen,Omar feat. Mumle,4,Stort streaminghit 2025
+Blodigt,Anton Westerlin feat. Annika,3,Stort streaminghit 2025
+Du ligner din mor,Benjamin Hav feat. Lukas Graham,2,Stort streaminghit 2025
+Kendt mig en uge,Mille,4,Stort streaminghit 2025
+Første dag,Benjamin Hav feat. Ella Augusta,4,Mest spillede på P3 2024
+Disko i KBH,Blæst,4,Meget spillet på P3
+Ung & smuk,Kind Mod Kind,4,Meget spillet på P3
+Godthåbsvej,Uro,4,Meget spillet på P3
+Dansktop,Ukendt Kunstner,5,Kendt dansk hit
+Pilestræde,Oscar Køhler,4,Fra Spotify-spilleliste 'Sange man kan synge med på'
+Blondiner & Brunetter,ICEKIID,3,Fra Spotify-spilleliste
+Under Stjernerne På Himlen,Rasmus Seebach,2,Fra Spotify-spilleliste
+Øde Ø,Rasmus Seebach,2,Fra Spotify-spilleliste
+De Værste Bedste År,Rasmus Seebach,2,Fra Spotify-spilleliste
+Tusind Farver,Rasmus Seebach,2,Fra Spotify-spilleliste
+Dobbeltslag,Joey Moe,2,Fra Spotify-spilleliste
+Alt Er Forbi,NOAH,3,Fra Spotify-spilleliste
+1000 År,"Ankerstjerne, Rasmus Seebach",2,Fra Spotify-spilleliste
+Ingen Kan Love Dig I Morgen,Rasmus Seebach,2,Fra Spotify-spilleliste
+Over Byen,NOAH,3,Fra Spotify-spilleliste
+Man Kan Ikk Spole Tiden Tilbage,Xander Linnet,3,Fra Spotify-spilleliste
+I En Lille Båd Der Gynger,Bamses Venner,3,Børneklassiker
+For Evigt,"Volbeat, Johan Olsen",2,Stor dansk metal-klassiker
+Din For Evigt,Burhan G,2,Fra Spotify-spilleliste
+"Ikke I Nat, Ikke Endnu",Burhan G,2,Fra Spotify-spilleliste
+Danmark,Shu-bi-dua,1,Fra Spotify-spilleliste
+Himmelhunden,Teddy Edelmann,3,Dansktop-klassiker
+Tænder På Dig,Jakob Sveistrup,3,Fra Spotify-spilleliste
+"Hva' Gør Vi Nu, Lille Du?",Gasolin',2,Gasolin'-hit
+Jeg Vil Bo På Vesterbro,Teddy Edelmann,3,Dansktop-klassiker
+To Mennesker På En Strand,John Mogensen,2,John Mogensen-klassiker
+Hammer Hammer Fedt,Jacob Haugaard,3,Dansktop-klassiker
+Vuffeli-Vov,Shu-bi-dua,2,Shu-bi-dua-klassiker
+Ensomhedens Gade Nr. 9,John Mogensen,2,John Mogensen-hit
+Blip-Båt,Kim Larsen,2,Kim Larsen-hit
+Alice,Flemming Bamse Jørgensen,2,Dansktop-klassiker
+Onkel Christian,Lars Lilholt Band,3,Lars Lilholt Band-hit
+Det Bedste Til Mig Og Mine Venner,Gasolin',2,Gasolin'-hit
+Fut I Fejemøget,John Mogensen,2,John Mogensen-hit
+Sikke'n Dejlig Dag,Stig Møller,2,Dansktop-klassiker
+Vi holder fest,Torben Lendager,5,Dansktop-klassiker
+Peter lå i telt,"Jodle Birge, Ib Grønbech",3,Dansktop-klassiker
+Gi'r du et knus,Snapshot,5,Dansktop-klassiker
+Ta' Med Ud Og Fisk,Gitte Hænning,3,Gitte Hænning-klassiker
+Kongens Have,Bamses Venner,3,Børneklassiker
+Det Burde Ikk Være Sådan Her,Xander Linnet,3,Fra Spotify-spilleliste
+Drunk In The Morning,Lukas Graham,2,Lukas Graham-hit
+Hvad Nu Hvis,"Alex, Nik & Jay",2,Fra Spotify-spilleliste
+Ingen Som Du,Puls,4,Fra Spotify-spilleliste
+Hun Tog Min Guitar,Muri & Mario,5,Fra Spotify-spilleliste
+Boombastic,Emilio,4,Dansk 90'er-hit
+Glemmer Dig Aldrig,"Svenstrup & Vendelboe, Nadia Malm",4,Fra Spotify-spilleliste
+Ring Til Politiet,Bring Det På,4,Fra Spotify-spilleliste
+Gulddans,ICEKIID,3,Fra Spotify-spilleliste
+Kom Af Sig Selv,Artigeardit,3,Fra Spotify-spilleliste
+Dumme Penge,"KESI, Don Stefano",3,Fra Spotify-spilleliste
+Del Af Mig,Artigeardit,3,Fra Spotify-spilleliste
+Tour,"Lamin, KESI",3,Fra Spotify-spilleliste
+Mit Rette Element,Jasmin,4,Fra Spotify-spilleliste
+Ben,Tessa,4,Fra Spotify-spilleliste
+Supernova,Babou,4,Fra Spotify-spilleliste
+FuckBoi,Ude Af Kontrol,4,Fra Spotify-spilleliste (Emil: navnet er fint)
+Allerede Is,Emil Stabil,4,Fra Spotify-spilleliste
+Slem igen,"Blak, Jimilian, Ceci Luca",3,Fra Spotify-spilleliste
+Jantelov,Ude Af Kontrol,4,Fra Spotify-spilleliste
+Yo-Yo,Joey Moe,2,Joey Moe-hit
+Gi Mig Det Hele,NODE,4,Fra Spotify-spilleliste
+Følelsen,KESI,3,Kesi-hit
+Smil Du På,Clemens,4,Fra Spotify-spilleliste
+Efter Mig,"Jimilian, Skinz",3,Fra Spotify-spilleliste
+Synger For Mig,"Citybois, Skinz",3,Fra Spotify-spilleliste
+6 Liter,TopGunn,3,Fra Spotify-spilleliste
+Su Casa,"KESI, Gilli",3,Fra Spotify-spilleliste
+2 Mod Verden,Shaka Loveless,3,Fra Spotify-spilleliste
+Dengang Du Græd,Shaka Loveless,3,Fra Spotify-spilleliste
+Jeg Vil Ha' Dig For Mig Selv,Burhan G,2,Burhan G-hit
+Vent Og Se,"Ankerstjerne, Lille",3,Fra Spotify-spilleliste
+Lille Hjerte,"Ankerstjerne, Shaka Loveless",3,Fra Spotify-spilleliste
+Million,Joey Moe,2,Fra Spotify-spilleliste
+Du' En Èner,Joey Moe,2,Fra Spotify-spilleliste
+Klar På Mig Nu,Joey Moe,2,Fra Spotify-spilleliste
+Hvis Det Ik' Skal Være Os,Joey Moe,2,Fra Spotify-spilleliste
+Falder,Rasmus Seebach,2,Rasmus Seebach-hit
+Millionær,"Rasmus Seebach, Ankerstjerne",2,Rasmus Seebach-hit
+Velkommen Til Medina,Medina,2,Medinas gennembrudshit
+Synd For Dig,Medina,2,Medina-hit
+For Altid,Medina,2,Medina-hit
+All My Love,Rocazino,3,Rocazino-hit
+Tættere På Himlen,"Burhan G, Nik & Jay",2,Fra Spotify-spilleliste
+Magi I Luften,Halberg - Larsen,3,Fra Spotify-spilleliste
+Ramt I Natten,Lizzie,4,Fra Spotify-spilleliste
+Bonsoir Madame,Big Fat Snake,3,Big Fat Snake-klassiker
+Malene,Sys Bjerre,2,Sys Bjerre-hit
+Smuk som et stjerneskud,Brødrene Olsen,3,"Eurovision-vinder 2000, kæmpe klassiker"
+Spændt Op Til Lir,Den Gale Pose,5,Fra Spotify-spilleliste
+Min Store Kærlighed,"Hva Snakker Du Om?, Anders Matthesen, Bossy Bo",5,Fra Spotify-spilleliste
+Stik Mig En Øl,Johny Cola,5,Fra Spotify-spilleliste
+Den Bedste Tid,One Two,4,One Two-hit
+Du Kan Gøre Hvad Du Vil,Christian Brøns,5,Fra Spotify-spilleliste
+Kys bruden,TV-2,2,TV-2-hit
+De skal have baghjul nede i touren,Drengene Fra Angora,5,Fra Spotify-spilleliste
+Sunshine Reggae,Laid Back,1,Laid Back-klassiker
+Vil du noget?,"Guldimund, Saveus",4,Fra Spotify-spilleliste
+Ham Med Guitaren,Christopher,2,Christopher-hit
+Livsforladt,Annika,3,Annika-hit
+Den Danske Sommer,"Tobias Rahim, Birthe Kjær",2,Fra Spotify-spilleliste
+Dét Der Udenfor,The Minds Of 99,3,The Minds of 99-hit
+Flue i et spind,APHACA,3,Aphaca-hit
+Hørt Det Før,"Anton Westerlin, Pil, Annika, Mille, Medina",2,Fra Spotify-spilleliste
+Copenhagen City,"Emil Kruse, OK OK, Anthon Edwards",4,Fra Spotify-spilleliste
+Bliv hvor du er,"Rosa, Artigeardit",3,Fra Spotify-spilleliste
+hader ik mig selv sammen med dig,Mille,4,Fra Spotify-spilleliste
+NATTEN BLIVER MORGEN,D1MA,3,D1MA-hit
+The Actor,Michael Learns To Rock,2,Michael Learns to Rock-hit
+Tænker Ik På Andre,"Suspekt, URO",2,Fra Spotify-spilleliste
+Skyklapper,Rosa,4,Fra Spotify-spilleliste
+Kogeplade,Katinka,4,Katinka-hit
+Elsker Dig Så Meget,Blæst,4,Blæst-hit
+Novembervej,Nik & Jay,2,Nik & Jay-hit
+Hele Verden Fra Forstanden,TV-2,2,TV-2-hit
+Hjertet Ser,"Karen Busck, Erann DD",4,Fra Spotify-spilleliste
+Move Your Feet,Junior Senior,1,"Dansk duo, verdenshit"
+My Secret Lover,Private,4,Dansk eurodance-klassiker
+Smuk Og Dejlig,Shit & Chalou,4,Fra Spotify-spilleliste
+Let Love Be Love,"S.O.A.P., Christina, Remee, Juice",4,Fra Spotify-spilleliste
+Vi skal ud i det blå,Det Brune Punktum,5,Fra Spotify-spilleliste
+What A Life,Scarlet Pleasure,3,Scarlet Pleasure-hit
+En Nat Bliver Det Sommer,Love Shop,3,Love Shop-hit
+Vimmersvej,Bamses Venner,3,Børneklassiker
+Lille Frøken Himmelblå,Gitte Hænning,3,Gitte Hænning-klassiker
+Krøller Eller Ej,"Tommy Seebach, Debbie Cameron",2,Tommy Seebach-hit
+Sikke'n Fest,Johnny Reimar,3,Dansktop-klassiker
+Du Burde Købe Dig En Tyrolerhat,Johnny Reimar,3,Dansktop-klassiker
+Halli Halli Hallo,Johnny Reimar,3,Dansktop-klassiker
+Fly on the Wings of Love,Brødrene Olsen,3,Eurovision-vinder 2000
+Flower power tøj,Ulla Pia,4,Dansktop-klassiker
+Sidder på et værtshus,Bjarne Liller,4,Dansktop-klassiker
+Video video,Brixx,4,Fra Spotify-spilleliste
+Hvor skal vi sove i nat,Laban,5,Dansktop-klassiker
+Do You Speak English,"Keld Heick, Hilda Heick",3,Dansktop-klassiker
+Jeg vil i seng med de fleste,Det Brune Punktum,5,Fra Spotify-spilleliste
+Dyt I bamsen,Rollo & King,3,Rollo & King-hit
+Ved du hvad hun sagde?,Rollo & King,3,Rollo & King-hit
+Neonlys,Ukendt Kunstner,5,Ukendt Kunstner-hit
+Gi' Mig Et Smil,"Wafande, Kaka",3,Fra Spotify-spilleliste
+Tyveri,"Hasan Shah, Gilli",3,Fra Spotify-spilleliste
+Uanset,Rasmus Seebach,2,Rasmus Seebach-hit
+Fugle,Djämes Braun,4,Djämes Braun-hit
+Københavns Brunette,Kasper Nyemann,4,Fra Spotify-spilleliste
+Veninder,TopGunn,3,TopGunn-hit
+Kongens Have,TopGunn,3,TopGunn-hit
+I See Right Through To You,"DJ Encore, Engelina, Faustix",4,Fra Spotify-spilleliste
+First Like,"Christopher, Natholdet",2,Fra Spotify-spilleliste
+Vi To Datid Nu,Cisilia,3,Fra Spotify-spilleliste
+I Nat Er Vi Ladt,"Shaka Loveless, Simon Kvamm",3,Fra Spotify-spilleliste
+Dejlig,TopGunn,3,Fra Spotify-spilleliste
+Man Kan Ikke Stole På En Pige Med En Lille Røv,TopGunn,3,Fra Spotify-spilleliste (Emil: navnet er fint)
+Rica,"Gilli, KESI, Sivas",3,Fra Spotify-spilleliste
+Tilbud,TopGunn,3,Fra Spotify-spilleliste
+Hva' Med Dig Selv?,"Hva Snakker Du Om?, Anders Matthesen",5,Fra Spotify-spilleliste
+Nik & Jay,"TopGunn, Benjamin Hav",3,Fra Spotify-spilleliste
+Ibiza,"Benny Jamz, Gilli, KESI, B.O.C",3,Fra Spotify-spilleliste
+Til Banken,"Natasja, Tessa, Karen Mukupa",2,Fra Spotify-spilleliste
+Tættere End Vi Tror,"P3 Ung, Tessa, Christopher, Lukas Graham, Jada, Benjamin Hav",2,Kendt fælles-single fra P3
+KOLO,ICEKIID,3,Icekiid-hit
+Shorty Ringer,Josef Og Elias,4,Fra Spotify-spilleliste
+Helt Sikker,Gulddreng,3,Gulddreng-hit
+Er Det For Sent?,"Josef, TopGunn",3,Fra Spotify-spilleliste
+Stable,"Carmon, Artigeardit, Lamin",3,Fra Spotify-spilleliste
+Million På Konto,Hasan Shah,3,Fra Spotify-spilleliste
+Rundt,"Klumben, Raske Penge",4,Fra Spotify-spilleliste
+Tidligt Op,Gilli,3,Gilli-hit
+Hvor Fuck Er Min Drink?,"Artigeardit, Lamin",3,Fra Spotify-spilleliste (Emil: navnet er fint)
+The Second You Sleep,Saybia,3,Saybia-hit
+Calabria 2008,Natasja,2,Natasja-hit
+Proletar (Hvor Jeg Står),Suspekt,2,Suspekt-hit
+Drømmer Jeg,"Johnny Deluxe, Anna Nordell",3,Fra Spotify-spilleliste
+Igen & Igen,Nephew,2,Nephew-hit
+Stuck in My Heart,C21,3,Fra Spotify-spilleliste
+For dig ku' jeg gøre alting,TV-2,2,TV-2-hit
+Police Bells & Church Sirens,Nephew,2,Nephew-hit
+Du gør mig...,L.O.C.,2,L.O.C.-hit
+100 Dage,"Thomas Helmig, Medina",2,Fra Spotify-spilleliste
+Ensom,Medina,2,Medina-hit
+Drenge Som Mig,Johnny Deluxe,3,Johnny Deluxe-hit
+Frk. Escobar,L.O.C.,2,L.O.C.-hit
+Walkmand,Hej Matematik,4,Hej Matematik-hit
+Right Next to the Right One,Tim Christensen,3,Tim Christensen-hit
+Love Someone,Lukas Graham,2,Lukas Graham-hit
+Solo Dance,Martin Jensen,1,"Martin Jensen, internationalt hit"
+Mod Solnedgangen,Nik & Jay,2,Nik & Jay-hit
+Strip No More,Lukas Graham,2,Lukas Graham-hit
+Uden Forsvar,Marie Key,3,Marie Key-hit
+Bad,Christopher,2,Christopher-hit
+Kom Over,KESI,3,Kesi-hit
+Habibi Aiwa,Gilli,3,Gilli-hit
+Happy Home,Lukas Graham,2,Lukas Graham-hit
+Lipstick Lies,Julias Moon,4,Fra Spotify-spilleliste
+Oui,"Sivas, NODE, Gilli",3,Fra Spotify-spilleliste
+Strapped,FOOL,4,Fra Spotify-spilleliste
+Mamacita,"KESI, Benny Jamz",3,Kesi-hit
+Tomgang,Shaka Loveless,3,Shaka Loveless-hit
+Model,Gulddreng,3,Gulddreng-hit
+"Den jeg elsker, elsker jeg","Søs Fenger, Thomas Helmig, Sanne Salomonsen, Anne Linnet",2,Fra Spotify-spilleliste (dybere grav)
+Køb Bananer,Kim Larsen,2,Fra Spotify-spilleliste (dybere grav)
+De smukke unge mennesker,Kim Larsen,1,Fra Spotify-spilleliste (dybere grav)
+Venner for evigt,Bjørnskov,5,Fra Spotify-spilleliste (dybere grav)
+Vi er helte,Bjørnskov,5,Fra Spotify-spilleliste (dybere grav)
+I En Stjerneregn Af Sne,Mads Langer,3,Fra Spotify-spilleliste (dybere grav)
+Til Månen & Tilbage,Rasmus Thude,3,Fra Spotify-spilleliste (dybere grav)
+Før Vi Falder,NOAH,3,Fra Spotify-spilleliste (dybere grav)
+Tag Hvad Du Vil,"Ankerstjerne, Burhan G",2,Fra Spotify-spilleliste (dybere grav)
+Sandstorm,Rasmus Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Fotografi Af Dig,"Ankerstjerne, Rasmus Seebach",2,Fra Spotify-spilleliste (dybere grav)
+Vend Dig Om,NOAH,3,Fra Spotify-spilleliste (dybere grav)
+Lille Store Verden,Rasmus Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Shadows,Alphabeat,2,Fra Spotify-spilleliste (dybere grav)
+Igen I Dag,Rasmus Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Det' Okay,NOAH,3,Fra Spotify-spilleliste (dybere grav)
+Glad Igen,Rasmus Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Den Anden Side,Rasmus Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Natten Falder På,Rasmus Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Den Første Gang,LIGA,4,Fra Spotify-spilleliste (dybere grav)
+Skylder Dig Ik' Noget,LIGA,4,Fra Spotify-spilleliste (dybere grav)
+2017,Rasmus Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Beautiful,Rasmus Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Jalousi,Medina,2,Fra Spotify-spilleliste (dybere grav)
+Ikke Mere Tid,Shaka Loveless,3,Fra Spotify-spilleliste (dybere grav)
+Hey Shorty,Kato,3,Fra Spotify-spilleliste (dybere grav)
+Hvalborg,Shu-bi-dua,2,Fra Spotify-spilleliste (dybere grav)
+Dansevise,"Grethe Ingmann, Jørgen Ingmann",1,Fra Spotify-spilleliste (dybere grav)
+"Susanne, Birgitte og Hanne",Otto Brandenburg,3,Fra Spotify-spilleliste (dybere grav)
+Hjemmebrænderiet,de gyldne løver,5,Fra Spotify-spilleliste (dybere grav)
+Drik,Sømændene,5,Fra Spotify-spilleliste (dybere grav)
+Mandalay,Four Jacks,4,Fra Spotify-spilleliste (dybere grav)
+Jeg elsker dig som vinden blæser,På Slaget 12,5,Fra Spotify-spilleliste (dybere grav)
+Det' Dit Navn,"Kandis, DJ Ötzi",2,Fra Spotify-spilleliste (dybere grav)
+Fikumdik,Jacob Haugaard,3,Fra Spotify-spilleliste (dybere grav)
+Rør ved mig,Lecia & Lucienne,5,Fra Spotify-spilleliste (dybere grav)
+"Oh Marie, jeg vil hjem",Four Jacks,4,Fra Spotify-spilleliste (dybere grav)
+Rigtige Venner,Jodle Birge,3,Fra Spotify-spilleliste (dybere grav)
+Byens Bedste Bryster,Spar 2,5,Fra Spotify-spilleliste (dybere grav)
+"Ikke Flere Penge, Fyret Fra Mit Job",Teddy Edelmann,3,Fra Spotify-spilleliste (dybere grav)
+Når jeg tænder lys i mørket,Kandis,2,Fra Spotify-spilleliste (dybere grav)
+Vi skal gå hånd i hånd,The Donkeys,4,Fra Spotify-spilleliste (dybere grav)
+Den gule flyver,Bjørn & Okay,3,Fra Spotify-spilleliste (dybere grav)
+Musikalske venner,Allan Mortensen,5,Fra Spotify-spilleliste (dybere grav)
+Køge Torv,Kim Schwartz,5,Fra Spotify-spilleliste (dybere grav)
+Jeg ringer på fredag,The Donkeys,4,Fra Spotify-spilleliste (dybere grav)
+Det' det jeg altid har sagt,Tommy Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Facebook,Kandis,2,Fra Spotify-spilleliste (dybere grav)
+Put dig under dynen,Lille Palle,5,Fra Spotify-spilleliste (dybere grav)
+Hvor ska' vi sove i nat,Laban,5,Fra Spotify-spilleliste (dybere grav)
+Tusind røde roser,Jodle Birge,3,Fra Spotify-spilleliste (dybere grav)
+"øl, øl og mere øl",Klaus & Servants,5,Fra Spotify-spilleliste (dybere grav)
+Alt Med Dig,Kandis,2,Fra Spotify-spilleliste (dybere grav)
+Vil Du Danse Med Mig,Bamses Venner,3,Fra Spotify-spilleliste (dybere grav)
+Jeg sætter min hat som jeg vil,Daimi,4,Fra Spotify-spilleliste (dybere grav)
+Hold Me,Kandis,2,Fra Spotify-spilleliste (dybere grav)
+Jeg snakker med mig selv,Gitte Hænning,3,Fra Spotify-spilleliste (dybere grav)
+Sku' du spørg' fra no'en,Kirsten Og Søren,5,Fra Spotify-spilleliste (dybere grav)
+Den største bangebuks i byen,Bjørn & Okay,3,Fra Spotify-spilleliste (dybere grav)
+Tak fordi vi er venner,Svanerne,3,Fra Spotify-spilleliste (dybere grav)
+Kære lille mormor,Richard Ragnvald,3,Fra Spotify-spilleliste (dybere grav)
+Smilende Susie,Johnny Reimar,3,Fra Spotify-spilleliste (dybere grav)
+Aldrig mer' må jeg se dig,Lars Stryg & Royal Strings,4,Fra Spotify-spilleliste (dybere grav)
+En Enkel Sang Om Frihed,Bjørn & Okay,3,Fra Spotify-spilleliste (dybere grav)
+Balladen om fætter Hans,Svanerne,3,Fra Spotify-spilleliste (dybere grav)
+Åh' babe kom med et bud,Preben Kaas,3,Fra Spotify-spilleliste (dybere grav)
+Telefonen,Jan & Rene,5,Fra Spotify-spilleliste (dybere grav)
+Velkommen til verden,Dorthe Kollo,3,Fra Spotify-spilleliste (dybere grav)
+Hun er bare 15 år,Bjørn & Okay,3,Fra Spotify-spilleliste (dybere grav)
+Smilende Sussi,Kim & Hallo,5,Fra Spotify-spilleliste (dybere grav)
+E Viva Espanã,"Keld Heick, The Donkeys",3,Fra Spotify-spilleliste (dybere grav)
+Gid du var i Skanderborg,Dorthe Kollo,3,Fra Spotify-spilleliste (dybere grav)
+Jeg siger tak min skat,Svanerne,3,Fra Spotify-spilleliste (dybere grav)
+"Mine, Mine, Mine",Christopher,2,Fra Spotify-spilleliste (dybere grav)
+Sig Du Ka' Li' Mig,Tøsedrengene,4,Fra Spotify-spilleliste (dybere grav)
+Golden,"Brandon Beal, Lukas Graham",2,Fra Spotify-spilleliste (dybere grav)
+Magi I Luften,Halberg-Larsen,3,Fra Spotify-spilleliste (dybere grav)
+Two Again,Christian Burrows,4,Fra Spotify-spilleliste (dybere grav)
+Op A,Ude Af Kontrol,4,Fra Spotify-spilleliste (dybere grav)
+Det Ik Sket,Vild Smith,3,Fra Spotify-spilleliste (dybere grav)
+Bitches & Booze,"Kato, TopGunn, Brandon Beal",3,Fra Spotify-spilleliste (dybere grav)
+Sex On The Beach,Ude Af Kontrol,4,Fra Spotify-spilleliste (dybere grav)
+LA DANZA,"Branco, Gilli",3,Fra Spotify-spilleliste (dybere grav)
+Skejsen,"Molo, Benny Jamz, Gilli, MellemFingaMuzik",3,Fra Spotify-spilleliste (dybere grav)
+Billige Bajer,De Danske Hyrder,5,Fra Spotify-spilleliste (dybere grav)
+Sommer Sindssyg,Jimilian,3,Fra Spotify-spilleliste (dybere grav)
+Pool,"Citybois, TopGunn",3,Fra Spotify-spilleliste (dybere grav)
+Pengedans,KESI,3,Fra Spotify-spilleliste (dybere grav)
+Dumt På Dig,"Kato, TopGunn",3,Fra Spotify-spilleliste (dybere grav)
+God Dag,KESI,3,Fra Spotify-spilleliste (dybere grav)
+Uhh Det Er Så Svært At Være Så God,KIDD,3,Fra Spotify-spilleliste (dybere grav)
+BDK,"KESI, Gilli",3,Fra Spotify-spilleliste (dybere grav)
+Helt Fair,"Citybois, ICEKIID",3,Fra Spotify-spilleliste (dybere grav)
+Detaljen,"TopGunn, Fouli",3,Fra Spotify-spilleliste (dybere grav)
+Damer på lager,Jimilian,3,Fra Spotify-spilleliste (dybere grav)
+3xK,Ude Af Kontrol,4,Fra Spotify-spilleliste (dybere grav)
+Længe Siden,TopGunn,3,Fra Spotify-spilleliste (dybere grav)
+10 År,"Emil Lange, Klamfyr",4,Fra Spotify-spilleliste (dybere grav)
+Glo På Mig,Tessa,4,Fra Spotify-spilleliste (dybere grav)
+Søvnløs,"KESI, Don Stefano",3,Fra Spotify-spilleliste (dybere grav)
+Kamehameha,ICEKIID,3,Fra Spotify-spilleliste (dybere grav)
+Bølgen,"Molo, Benny Jamz, Gilli, MellemFingaMuzik",3,Fra Spotify-spilleliste (dybere grav)
+Sidste Timer,Sivas,3,Fra Spotify-spilleliste (dybere grav)
+For Evigt Ung,Sleiman,3,Fra Spotify-spilleliste (dybere grav)
+Mansa Musa,ICEKIID,3,Fra Spotify-spilleliste (dybere grav)
+Endnu en,Nik & Jay,2,Fra Spotify-spilleliste (dybere grav)
+Hyggesang,TopGunn,3,Fra Spotify-spilleliste (dybere grav)
+d.a.u.d.a,"Sivas, Gilli",3,Fra Spotify-spilleliste (dybere grav)
+Uuh,"Benny Jamz, Branco, KESI",3,Fra Spotify-spilleliste (dybere grav)
+Ryst' Pagne,KIDD,3,Fra Spotify-spilleliste (dybere grav)
+Ligesom Mig,KESI,3,Fra Spotify-spilleliste (dybere grav)
+Blæstegnen,"Tessa, Klamfyr",4,Fra Spotify-spilleliste (dybere grav)
+Ghetto Fabulous,Tessa,4,Fra Spotify-spilleliste (dybere grav)
+Nasty,KAMIL,4,Fra Spotify-spilleliste (dybere grav)
+Buongiorno,KIDD,3,Fra Spotify-spilleliste (dybere grav)
+Er Her,"Artigeardit, KESI",3,Fra Spotify-spilleliste (dybere grav)
+Det Passer,Johnson,4,Fra Spotify-spilleliste (dybere grav)
+Bedre,"KIDD, Don Stefano",3,Fra Spotify-spilleliste (dybere grav)
+Det Her,Emil Lange,4,Fra Spotify-spilleliste (dybere grav)
+Mest Ondt,"Burhan G, Medina",2,Fra Spotify-spilleliste (dybere grav)
+Når Et Lys Slukkes,Nik & Jay,2,Fra Spotify-spilleliste (dybere grav)
+Dum For Dig,Barbara Moleko,4,Fra Spotify-spilleliste (dybere grav)
+Når tiden går baglæns,"Clara Sofie, Rune RK",4,Fra Spotify-spilleliste (dybere grav)
+Min Indre Stemme,"Michael Rune, Nadia Gattas",4,Fra Spotify-spilleliste (dybere grav)
+Dybt Vand,"Svenstrup & Vendelboe, Nadia Malm",4,Fra Spotify-spilleliste (dybere grav)
+Momentet,"L.O.C., USO",2,Fra Spotify-spilleliste (dybere grav)
+Nitten,Thomas Holm,4,Fra Spotify-spilleliste (dybere grav)
+Dope,Puls,4,Fra Spotify-spilleliste (dybere grav)
+Arabiens Drøm,Anne Gadegaard,4,Fra Spotify-spilleliste (dybere grav)
+For Du Er,"Pelle B, Freja",4,Fra Spotify-spilleliste (dybere grav)
+Tro På Dig Selv,Chestnut Avenue,4,Fra Spotify-spilleliste (dybere grav)
+"En For Alle, Alle For En",The Johanssons,4,Fra Spotify-spilleliste (dybere grav)
+Kickflipper,Razz,4,Fra Spotify-spilleliste (dybere grav)
+Fi er min,Natasja,2,Fra Spotify-spilleliste (dybere grav)
+Ingen Dikkedarer,Niklas,4,Fra Spotify-spilleliste (dybere grav)
+Veninder,Niklas,4,Fra Spotify-spilleliste (dybere grav)
+Tro På Os To,SEB,4,Fra Spotify-spilleliste (dybere grav)
+Kun Min,Pelle B,4,Fra Spotify-spilleliste (dybere grav)
+Op med ho'det,Natasja,2,Fra Spotify-spilleliste (dybere grav)
+Hvor Som Helst,Når Som Helst - Sukkerchok,4,Fra Spotify-spilleliste (dybere grav)
+Stepz Of Love,Sukkerchok,4,Fra Spotify-spilleliste (dybere grav)
+Lidt I Fem,Rasmus Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Nede Mette,Blak,4,Fra Spotify-spilleliste (dybere grav)
+Party I Provinsen,Hej Matematik,4,Fra Spotify-spilleliste (dybere grav)
+Hop Op Fald Ned Og Slide,Isas Stepz,4,Fra Spotify-spilleliste (dybere grav)
+Shahata,Razi,4,Fra Spotify-spilleliste (dybere grav)
+Min Egen Maria,Chanlex,4,Fra Spotify-spilleliste (dybere grav)
+Mens Du Er Ung,Joli,4,Fra Spotify-spilleliste (dybere grav)
+Pigen Er Min,Cool Kids,4,Fra Spotify-spilleliste (dybere grav)
+Jeg Bli'r Ved,Energy,4,Fra Spotify-spilleliste (dybere grav)
+Du Du Du,Flora Ofelia,4,Fra Spotify-spilleliste (dybere grav)
+Du Ser Den Anden Vej,Emma Pi,4,Fra Spotify-spilleliste (dybere grav)
+Det' For Sent Nu,Benedikte K. & The Sisters,4,Fra Spotify-spilleliste (dybere grav)
+Hola Chica,Sandra Monique,4,Fra Spotify-spilleliste (dybere grav)
+Alle Mine Veninder,Sys Bjerre,2,Fra Spotify-spilleliste (dybere grav)
+Strejfer,Signe Svendsen,4,Fra Spotify-spilleliste (dybere grav)
+Rick Ross,Medina,2,Fra Spotify-spilleliste (dybere grav)
+Jutlandia,Kim Larsen,2,Fra Spotify-spilleliste (dybere grav)
+Hvorlænge vil du ydmyge dig?,Danser med Drenge,3,Fra Spotify-spilleliste (dybere grav)
+Sådan Nogen Som Os,Poul Krebs,3,Fra Spotify-spilleliste (dybere grav)
+Vågner I Natten,Dodo & the Dodos,2,Fra Spotify-spilleliste (dybere grav)
+Man Er Som Man Er,Kandis,2,Fra Spotify-spilleliste (dybere grav)
+Tænder På Et Kys,Alberte Winding,4,Fra Spotify-spilleliste (dybere grav)
+Du Er Ikke Alene,Alberte Winding,4,Fra Spotify-spilleliste (dybere grav)
+Video video,Jens Brixtofte,4,Fra Spotify-spilleliste (dybere grav)
+Ridder Lykke,Rocazino,3,Fra Spotify-spilleliste (dybere grav)
+Indianer,Tøsedrengene,4,Fra Spotify-spilleliste (dybere grav)
+Volvo B18-210,"Johny Cola, DJ Vision",5,Fra Spotify-spilleliste (dybere grav)
+Han Får For Lidt,Østkyst Hustlers,5,Fra Spotify-spilleliste (dybere grav)
+Don't Look For Love,"Shirley, Jonas Winge Leisner",3,Fra Spotify-spilleliste (dybere grav)
+I En Lille Båd Gynger,Johny Cola,5,Fra Spotify-spilleliste (dybere grav)
+Alt Det Som Ingen Ser,Johny Cola,5,Fra Spotify-spilleliste (dybere grav)
+Jeg Tager Imod,Thomas Helmig,2,Fra Spotify-spilleliste (dybere grav)
+Så Gik Der Tid Med Det,Tøsedrengene,4,Fra Spotify-spilleliste (dybere grav)
+Jeg vil la' lyset brænde,Kasper Juul,4,Fra Spotify-spilleliste (dybere grav)
+Den hvide dværg,Lars Lilholt Band,3,Fra Spotify-spilleliste (dybere grav)
+Kærligheden Brænder,Fede Finn & Funny Boyz,4,Fra Spotify-spilleliste (dybere grav)
+Hele Vejen,"Omar, Mumle",4,Fra Spotify-spilleliste (dybere grav)
+Stolt,"Annika, Lamin",3,Fra Spotify-spilleliste (dybere grav)
+1000 År,"Gobs, Rasmus Seebach, Ankerstjerne",2,Fra Spotify-spilleliste (dybere grav)
+Lyse Nætter,Alberte Winding,4,Fra Spotify-spilleliste (dybere grav)
+Sandheden,"Rasmus Seebach, Artigeardit",2,Fra Spotify-spilleliste (dybere grav)
+Vi pumper hjertet op,APHACA,3,Fra Spotify-spilleliste (dybere grav)
+Under Din Sne,The Minds Of 99,3,Fra Spotify-spilleliste (dybere grav)
+Blodigt,"Anton Westerlin, Annika",3,Fra Spotify-spilleliste (dybere grav)
+igen & igen,"Gobs, One Two",4,Fra Spotify-spilleliste (dybere grav)
+Hvor Solen Ik' Skinner,"Mumle, Svea S",4,Fra Spotify-spilleliste (dybere grav)
+I KNOW,D1MA,3,Fra Spotify-spilleliste (dybere grav)
+Du ligner din mor,"Benjamin Hav, Lukas Graham",2,Fra Spotify-spilleliste (dybere grav)
+Hva Du På,"Lamin, Gilli",3,Fra Spotify-spilleliste (dybere grav)
+Laugh 'n' a 1/2,D-A-D,2,Fra Spotify-spilleliste (dybere grav)
+Knokler Hårdt,Gilli,3,Fra Spotify-spilleliste (dybere grav)
+Bipolar,"Benny Jamz, Gilli, KESI, Lamin, B.O.C",3,Fra Spotify-spilleliste (dybere grav)
+Horsens,"Albert Heath, Sofie1998",4,Fra Spotify-spilleliste (dybere grav)
+Gemt Dit Nummer,"Burhan G, Medina",2,Fra Spotify-spilleliste (dybere grav)
+555,"Gilli, KESI",3,Fra Spotify-spilleliste (dybere grav)
+Børn Af Natten,"Ankerstjerne, Daniel Schulz, Panamah, Sigvardt",3,Fra Spotify-spilleliste (dybere grav)
+Amager Forbrænding,Carl Emil Petersen,4,Fra Spotify-spilleliste (dybere grav)
+Til Solen Er Sort,APHACA,3,Fra Spotify-spilleliste (dybere grav)
+MOONLIGHT,D1MA,3,Fra Spotify-spilleliste (dybere grav)
+Olivia For Altid,"Ankerstjerne, Omar, Svea S",3,Fra Spotify-spilleliste (dybere grav)
+"Det' kun vigtigt, hvad det er",Guldimund,4,Fra Spotify-spilleliste (dybere grav)
+Er det mig du elsker?,Malte Ebert,3,Fra Spotify-spilleliste (dybere grav)
+Baglæns,Ella Augusta,4,Fra Spotify-spilleliste (dybere grav)
+drikker med mig selv,Mille,4,Fra Spotify-spilleliste (dybere grav)
+Hvor Var Jeg Endt,"Christopher, Thor Farlov",2,Fra Spotify-spilleliste (dybere grav)
+Vi ku' gå hele vejen,Blæst,4,Fra Spotify-spilleliste (dybere grav)
+føler mig selv 100,andreas odbjerg,4,Fra Spotify-spilleliste (dybere grav)
+Verden Vågner,"Gilli, Saveus",3,Fra Spotify-spilleliste (dybere grav)
+Frit Land,Ulige Numre,4,Fra Spotify-spilleliste (dybere grav)
+Pianomand,Kim Larsen,2,Fra Spotify-spilleliste (dybere grav)
+Bakerman,Laid Back,1,Fra Spotify-spilleliste (dybere grav)
+Igen & Igen &,Nephew,2,Fra Spotify-spilleliste (dybere grav)
+DRØM MIG VÆK,D1MA,3,Fra Spotify-spilleliste (dybere grav)
+Alt Det,"Thor Farlov, Noah Carter, Danseorkestret",3,Fra Spotify-spilleliste (dybere grav)
+Angel Zoo,Phlake,3,Fra Spotify-spilleliste (dybere grav)
+Genstart,PATINA,4,Fra Spotify-spilleliste (dybere grav)
+Børn Af Natten,Panamah,4,Fra Spotify-spilleliste (dybere grav)
+Forvandling,Lis Sørensen,3,Fra Spotify-spilleliste (dybere grav)
+Mr. Swing King,GNAGS,2,Fra Spotify-spilleliste (dybere grav)
+Hvorfor Går Louise Til Bal?,Flemming Bamse Jørgensen,2,Fra Spotify-spilleliste (dybere grav)
+Live to Survive,MØ,2,Fra Spotify-spilleliste (dybere grav)
+Superstar,Christine Milton,4,Fra Spotify-spilleliste (dybere grav)
+Skibet Skal Sejle I Nat,"Gustav Winckler, Birthe Wilke",2,Fra Spotify-spilleliste (dybere grav)
+Re-sepp-ten,"VM Holdet, Herrelandsholdet, Landsholdet",4,Fra Spotify-spilleliste (dybere grav)
+Se Venedig Og Dø,Lone Kellermann,3,Fra Spotify-spilleliste (dybere grav)
+Costa Del Sol,C.V. Jørgensen,3,Fra Spotify-spilleliste (dybere grav)
+Kærligheden Kalder,Sanne Salomonsen,2,Fra Spotify-spilleliste (dybere grav)
+To lys på et bord,Otto Brandenburg,3,Fra Spotify-spilleliste (dybere grav)
+Try,Liss,4,Fra Spotify-spilleliste (dybere grav)
+Sidder På Et Værtshus,John Mogensen,2,Fra Spotify-spilleliste (dybere grav)
+Ud Under Åben Himmel,Tøsedrengene,4,Fra Spotify-spilleliste (dybere grav)
+Glor På Vinduer,"Anne Linnet, Marquis De Sade",2,Fra Spotify-spilleliste (dybere grav)
+Elsker dig for evigt,Lars H.U.G.,3,Fra Spotify-spilleliste (dybere grav)
+Jeg ved det godt,Rugsted & Kreutzfeldt,4,Fra Spotify-spilleliste (dybere grav)
+Pregnant,Phlake,3,Fra Spotify-spilleliste (dybere grav)
+Hey Love,Quadron,3,Fra Spotify-spilleliste (dybere grav)
+Overgir Mig Langsomt,Mads Langer,3,Fra Spotify-spilleliste (dybere grav)
+Dronning Af Månen,Pil,4,Fra Spotify-spilleliste (dybere grav)
+For kendt,Lex & Klatten,4,Fra Spotify-spilleliste (dybere grav)
+Gem Et Lille Smil Til Det Bli'r Gråvejr,Gustav Winckler,2,Fra Spotify-spilleliste (dybere grav)
+Kender Du Det?,Søren Kragh-Jacobsen,3,Fra Spotify-spilleliste (dybere grav)
+Helt Alene,News,3,Fra Spotify-spilleliste (dybere grav)
+All That I Want,C21,3,Fra Spotify-spilleliste (dybere grav)
+Buster,Nanna,4,Fra Spotify-spilleliste (dybere grav)
+Det' lige det,Kirsten Og Søren,5,Fra Spotify-spilleliste (dybere grav)
+Kold som is,Laban,5,Fra Spotify-spilleliste (dybere grav)
+Time Can Heal A Man,Saveus,4,Fra Spotify-spilleliste (dybere grav)
+I Nat Er Det Nat,"Emil Kruse, Wads",4,Fra Spotify-spilleliste (dybere grav)
+Vent på mig,"Peter Frodin, Jimmy Jørgensen",4,Fra Spotify-spilleliste (dybere grav)
+Sommer i Europa,Rasmus Nøhr,3,Fra Spotify-spilleliste (dybere grav)
+Boom Boom Boom,Emil Stabil,4,Fra Spotify-spilleliste (dybere grav)
+Hun Vil Ha,Pede B,4,Fra Spotify-spilleliste (dybere grav)
+DRIPPY,ICEKIID,3,Fra Spotify-spilleliste (dybere grav)
+LELELE,ZUUZ,4,Fra Spotify-spilleliste (dybere grav)
+Plastic,"PIND, Benjamin Hav",4,Fra Spotify-spilleliste (dybere grav)
+Uartig,Wafande,3,Fra Spotify-spilleliste (dybere grav)
+Sender mig til månen,"Cheff Records, KIDD, TopGunn, Klumben, ELOQ",3,Fra Spotify-spilleliste (dybere grav)
+Dehydreret,Oure Ungdomscamp,5,Fra Spotify-spilleliste (dybere grav)
+Ta' Og Fuck Af!,"Hva Snakker Du Om?, Anders Matthesen",5,Fra Spotify-spilleliste (dybere grav)
+Bar La Hende Drik,GMG,4,Fra Spotify-spilleliste (dybere grav)
+Danser,GMG,4,Fra Spotify-spilleliste (dybere grav)
+"Gode Dage, Gode Drinks",Lamin,3,Fra Spotify-spilleliste (dybere grav)
+MCQUEEN,"RH, Branco",3,Fra Spotify-spilleliste (dybere grav)
+Lågsus For Evigt,"Spektors, Tessa, TopGunn",3,Fra Spotify-spilleliste (dybere grav)
+Baianá,Gilli,3,Fra Spotify-spilleliste (dybere grav)
+No Warning,"ICEKIID, Branco",3,Fra Spotify-spilleliste (dybere grav)
+Op A Væggen,Tobias Rahim,2,Fra Spotify-spilleliste (dybere grav)
+Vågen,"Artigeardit, Lamin",3,Fra Spotify-spilleliste (dybere grav)
+Peligrosa,Gilli,3,Fra Spotify-spilleliste (dybere grav)
+Hvor Har Du Lært Det,GMG,4,Fra Spotify-spilleliste (dybere grav)
+1 Sammen,Gilli,3,Fra Spotify-spilleliste (dybere grav)
+Baianá,"Gilli, Yo Johnny",3,Fra Spotify-spilleliste (dybere grav)
+MILANO,Cizzo,4,Fra Spotify-spilleliste (dybere grav)
+Window,Lamin,3,Fra Spotify-spilleliste (dybere grav)
+Champion Part II,"Kato, Jon, Clemens",3,Fra Spotify-spilleliste (dybere grav)
+Legend,Tevvez,4,Fra Spotify-spilleliste (dybere grav)
+Bloody Mary,Lockdown,4,Fra Spotify-spilleliste (dybere grav)
+Sig Mig,Citybois,3,Fra Spotify-spilleliste (dybere grav)
+Finde Tilbage,Citybois,3,Fra Spotify-spilleliste (dybere grav)
+I min zone,Skinz,3,Fra Spotify-spilleliste (dybere grav)
+Malibu,Skinz,3,Fra Spotify-spilleliste (dybere grav)
+Jeg har en pige,Skinz,3,Fra Spotify-spilleliste (dybere grav)
+Karma,"Burhan G, L.O.C.",2,Fra Spotify-spilleliste (dybere grav)
+Bare Man Ku',Kandis,2,Fra Spotify-spilleliste (dybere grav)
+Okay,Rasmus Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Verden Ka' Vente,Rasmus Seebach,2,Fra Spotify-spilleliste (dybere grav)
+Hvis Du Går,Hjalmer,4,Fra Spotify-spilleliste (dybere grav)
+Drag Me Down,"Daniel McMillan, Kasper Juul",4,Fra Spotify-spilleliste (dybere grav)
+En Sang,"Emil Stabil, Gucci Mane",4,Fra Spotify-spilleliste (dybere grav)
+Alene,Kasper Juul,4,Fra Spotify-spilleliste (dybere grav)
+Hannibal Og Jerry,Kandis,2,Fra Spotify-spilleliste (dybere grav)
+X,KESI,3,Fra Spotify-spilleliste (dybere grav)
+Rapport Fra Andeby,Bølle-Bob,4,Fra Spotify-spilleliste (dybere grav)
+Se Mig Nu,Gulddreng,3,Fra Spotify-spilleliste (dybere grav)
+Nemt,Gulddreng,3,Fra Spotify-spilleliste (dybere grav)
+Hva' Så,Gulddreng,3,Fra Spotify-spilleliste (dybere grav)
+Langelinie,Kasper Juul,4,Fra Spotify-spilleliste (dybere grav)
+Proletar,Suspekt,2,Fra Spotify-spilleliste (dybere grav)
+Milan Allé,Magtens Korridorer,3,Fra Spotify-spilleliste (dybere grav)
+XxxCouture,L.O.C.,2,Fra Spotify-spilleliste (dybere grav)
+Et Sidste Kys,"Nik & Jay, Julie",2,Fra Spotify-spilleliste (dybere grav)
+Va Fangool!,Nephew,2,Fra Spotify-spilleliste (dybere grav)
+f**k Dig,Anna David,4,Fra Spotify-spilleliste (dybere grav)
+Mogens og Karen,Juncker,4,Fra Spotify-spilleliste (dybere grav)
+Berlin,Nordstrøm,4,Fra Spotify-spilleliste (dybere grav)
+Fibs,KNA Connected,4,Fra Spotify-spilleliste (dybere grav)
+Worst / Best Case Scenario,Nephew,2,Fra Spotify-spilleliste (dybere grav)
+Lorteparforhold,Magtens Korridorer,3,Fra Spotify-spilleliste (dybere grav)
+Love Is a Matter Of...,Tim Christensen,3,Fra Spotify-spilleliste (dybere grav)
+Gravøl,"Jokeren, Niarn, L.O.C.",2,Fra Spotify-spilleliste (dybere grav)
+Save Me From Myself,Carpark North,3,Fra Spotify-spilleliste (dybere grav)
+Open Wide,Tina Dickow,3,Fra Spotify-spilleliste (dybere grav)
+Nordhavn Station,Magtens Korridorer,3,Fra Spotify-spilleliste (dybere grav)
+Guantanamo,Outlandish,2,Fra Spotify-spilleliste (dybere grav)
+Fluen På Væggen,UFO Yepha,4,Fra Spotify-spilleliste (dybere grav)
+Det Bedste Til Sidst,Linda Andrews,4,Fra Spotify-spilleliste (dybere grav)
+Pandora,Magtens Korridorer,3,Fra Spotify-spilleliste (dybere grav)
+Shall We Be Grateful,Carpark North,3,Fra Spotify-spilleliste (dybere grav)
+The Day After Tomorrow,Saybia,3,Fra Spotify-spilleliste (dybere grav)
+Crucify My Heart,Private,4,Fra Spotify-spilleliste (dybere grav)
+I Danmark Er Jeg Født,Isam B,1,Fra Spotify-spilleliste (dybere grav)
+Hvorfor vil du ikk,L.O.C.,2,Fra Spotify-spilleliste (dybere grav)
+City Of Dreams,The Loft,4,Fra Spotify-spilleliste (dybere grav)
+Walking on Water,Zididada,3,Fra Spotify-spilleliste (dybere grav)
+Hver Dag,UFO Yepha,4,Fra Spotify-spilleliste (dybere grav)
+In The End I Started,Brinck,4,Fra Spotify-spilleliste (dybere grav)
+Whispering at the Top of My Lungs,Tim Christensen,3,Fra Spotify-spilleliste (dybere grav)
+Cartoon Heroes,Aqua,1,Fra Spotify-spilleliste (dybere grav)
+Who Is He?,Burhan G,2,Fra Spotify-spilleliste (dybere grav)
+She Cries,C21,3,Fra Spotify-spilleliste (dybere grav)
+Glor På Vinduer,Szhirley,3,Fra Spotify-spilleliste (dybere grav)
+Love Sea,Alphabeat,2,Fra Spotify-spilleliste (dybere grav)
+I Only Ask of God,Outlandish,2,Fra Spotify-spilleliste (dybere grav)
+Every Little Part of Me,Julie,3,Fra Spotify-spilleliste (dybere grav)
+Op og ned,Thomas Helmig,2,Fra Spotify-spilleliste (dybere grav)
+Zididada Day,Zididada,3,Fra Spotify-spilleliste (dybere grav)
+Hos Dig,Blå Øjne,4,Fra Spotify-spilleliste (dybere grav)
+Completely Fallen,Julie,3,Fra Spotify-spilleliste (dybere grav)
+Ekstra,KESI,3,Fra Spotify-spilleliste (dybere grav)
+Crying In The Sun,"Faustix, RANI",4,Fra Spotify-spilleliste (dybere grav)
+Landet,Marie Key,3,Fra Spotify-spilleliste (dybere grav)
+Julia,LIGA,4,Fra Spotify-spilleliste (dybere grav)
+Only Teardrops,Emmelie de Forest,1,Fra Spotify-spilleliste (dybere grav)
+Sydpå,Bro,4,Fra Spotify-spilleliste (dybere grav)
+C'est la vie,"Gilli, MellemFingaMuzik",3,Fra Spotify-spilleliste (dybere grav)
+Holder Fast,"Hennedub, Gilli, Lukas Graham",2,Fra Spotify-spilleliste (dybere grav)
+12 Dage,Medina,2,Fra Spotify-spilleliste (dybere grav)
+Gå Med Dig,"Nephew, Marie Key",2,Fra Spotify-spilleliste (dybere grav)
+Langsom,Gilli,3,Fra Spotify-spilleliste (dybere grav)
+Forstadsdrømme,Nik & Jay,2,Fra Spotify-spilleliste (dybere grav)
+Crazy,Christopher,2,Fra Spotify-spilleliste (dybere grav)
+Lyser I Mørke,Medina,2,Fra Spotify-spilleliste (dybere grav)
+Planets,Nicklas Sahl,4,Fra Spotify-spilleliste (dybere grav)
+Bomaye,"Sleiman, Livid, MellemFingaMuzik",3,Fra Spotify-spilleliste (dybere grav)
+Tættere End Vi Tror,"Tessa, Christopher, Lukas Graham, Jada, Benjamin Hav, Don Stefano, Mads Langer",2,Fra Spotify-spilleliste (dybere grav)
+Uden Dig,Ukendt Kunstner,5,Fra Spotify-spilleliste (dybere grav)
