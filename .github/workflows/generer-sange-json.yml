@@ -34,7 +34,12 @@ jobs:
       - name: Generér data/sange.json
         run: node scripts/generer-sange-json.js
 
+      # if: always() — kør denne selv hvis trinnet ovenfor fejlede undervejs.
+      # Generator-scriptet gemmer løbende (for hver 20. nye sang), så selv en
+      # kørsel der går i stå et sted i midten har typisk allerede noget at
+      # gemme. Uden dette trin ville alt det arbejde ellers gå tabt.
       - name: Gem ændringer i sange.json
+        if: always()
         run: |
           git config user.name "Ørehænger-robot"
           git config user.email "actions@users.noreply.github.com"
