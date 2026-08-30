@@ -116,6 +116,26 @@
   }
   .afspil-knap:hover { background: #333; }
 
+  /* ---- Rund afspil-knap til selve klippet, inspireret af songspot.net
+     (Emil, 2026-08-30). Kun til "▶ Afspil klip" — de andre knapper
+     (Spil videre, Næste sang osv.) beholder den brede .afspil-knap. ---- */
+  .afspil-rund-knap {
+    width: 64px;
+    height: 64px;
+    padding: 0 0 0 4px;
+    border-radius: 50%;
+    border: none;
+    background: #1b1b1b;
+    color: #fff;
+    font-size: 1.3em;
+    cursor: pointer;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .afspil-rund-knap:hover { background: #333; }
+
   .gaet-felt {
     width: 100%;
     padding: 12px 14px;
@@ -245,6 +265,7 @@
       box-shadow: 0 24px 60px rgba(43,43,43,0.07);
     }
     .afspil-knap { padding: 16px; font-size: 1.1em; }
+    .afspil-rund-knap { width: 72px; height: 72px; font-size: 1.5em; }
     .gaet-felt { padding: 14px 16px; font-size: 1.05em; }
   }
 
@@ -255,14 +276,15 @@
   @media (min-width: 1000px) {
     body { padding: 72px 24px; }
     .layout {
-      max-width: 1180px;
+      max-width: 1300px;
       display: grid;
-      grid-template-columns: minmax(160px, 1fr) minmax(400px, 540px) minmax(160px, 1fr);
+      grid-template-columns: minmax(140px, 1fr) minmax(480px, 680px) minmax(140px, 1fr);
       gap: 56px;
       align-items: start;
     }
     .side { display: contents; }
-    .topbar { grid-column: 2; grid-row: 1; }
+    .topbar { grid-column: 2; grid-row: 1; text-align: center; }
+    .logo::after { margin: 8px auto 0; }
     #spil { grid-column: 2; grid-row: 2; }
     audio { grid-column: 2; }
 
@@ -851,7 +873,7 @@
     let html = `
       <p class="dagstal">Dagens sange #${dagNummer} — sang ${state.sangIndex + 1} af ${state.dagensSange.length}</p>
       <p class="klip-info">Klip ${state.trinIndex + 1} af ${KLIP_TRIN.length}: ${varighed} sekund${varighed === 1 ? "" : "er"}</p>
-      <button class="afspil-knap" onclick="spilKlip()">▶ Afspil klip</button>
+      <button class="afspil-rund-knap" onclick="spilKlip()" aria-label="Afspil klip">▶</button>
       <div class="klip-bar" id="klip-bar"></div>
     `;
 
@@ -1066,7 +1088,7 @@
     let html = `
       <p class="dagstal">Spil videre — sang ${bonusState.indexIBatch + 1} af ${bonusState.sange.length}</p>
       <p class="klip-info">Klip ${bonusState.trinIndex + 1} af ${KLIP_TRIN.length}: ${varighed} sekund${varighed === 1 ? "" : "er"}</p>
-      <button class="afspil-knap" onclick="spilBonusKlip()">▶ Afspil klip</button>
+      <button class="afspil-rund-knap" onclick="spilBonusKlip()" aria-label="Afspil klip">▶</button>
       <div class="klip-bar" id="klip-bar"></div>
     `;
 
