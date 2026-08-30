@@ -1,0 +1,47 @@
+name: Generér sange.json
+
+# Kører automatisk hver gang data/sange.csv ændrer sig (fx når Emil
+# tilføjer eller retter en sang), og kan også startes manuelt fra
+# GitHub ("Run workflow"-knappen under fanen Actions).
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/sange.csv"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hent koden
+        uses: actions/checkout@v4
+
+      - name: Sæt Node.js op
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Sørg for at ffmpeg er installeret
+        run: |
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update && sudo apt-get install -y ffmpeg
+          fi
+
+      - name: Generér data/sange.json
+        run: node scripts/generer-sange-json.js
+
+      - name: Gem ændringer i sange.json
+        run: |
+          git config user.name "Ørehænger-robot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/sange.json
+          if git diff --staged --quiet; then
+            echo "Ingen ændringer i sange.json — commit'er ikke."
+          else
+            git commit -m "Opdatér data/sange.json automatisk"
+            git push
+          fi
