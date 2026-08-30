@@ -171,6 +171,41 @@
   .tilbage-link { font-size: 0.85em; color: #6b6b6b; margin: 14px 0 0; }
   .tilbage-link a { color: #6b6b6b; }
 
+  /* ---- Afsløringsskærm mellem hver sang ---- */
+  .afsloering { text-align: center; }
+  .afsloering .cover {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 6px auto 18px;
+    box-shadow: 0 10px 26px rgba(43,43,43,0.12);
+  }
+  .afsloering .kilde-label {
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6b6b6b;
+    margin: 0 0 4px;
+  }
+  .afsloering h2 { margin: 0 0 4px; font-size: 1.4em; }
+  .afsloering .kunstner { color: #6b6b6b; margin: 0 0 16px; }
+  .afsloering .afspil-knap,
+  .afsloering .knap { margin-top: 4px; }
+
+  .status-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 999px;
+    border: 2px solid;
+    font-weight: 700;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+    margin-bottom: 22px;
+  }
+  .status-badge.rigtigt { color: #2f9e44; border-color: #2f9e44; }
+  .status-badge.forkert { color: #d7263d; border-color: #d7263d; }
+
   /* ---- Computer: mere luft, en løftet kortfølelse, samme opbygning ---- */
   @media (min-width: 700px) {
     body { padding: 64px 24px; }
@@ -276,6 +311,58 @@
   };
 
   let spilTimeout = null;
+
+  // ---- Afspilning af et klip fra et præcist startpunkt i et præcist
+  // antal sekunder — brugt af både dagens sang og "spil videre" ----
+  // Fejl fundet 2026-08-30: at sætte `audio.currentTime` og kalde
+  // `audio.play()` og SAMTIDIG stole på en fast `setTimeout` til at
+  // pause'e, er upålideligt på mobil. To ting sker asynkront og tager
+  // varierende tid på en telefon (typisk over mobilnet): (1) selve
+  // spring-til-tidspunkt (seeking) er ikke altid færdigt når `play()`
+  // kaldes, så afspilningen kan nå at starte fra det GAMLE tidspunkt og
+  // så hoppe midt i klippet — det gav "skævt" lydklip hver anden gang;
+  // (2) der går tid fra `play()` kaldes til lyden rent faktisk kommer ud
+  // af højttaleren, så et 100ms-klip kunne nå at blive sat på pause,
+  // før der overhovedet var lyd — det gav helt stille klip på 0,1 sek.
+  // Løsningen er at vente på browserens egne "seeked"- og
+  // "playing"-hændelser i stedet for at gætte med faste ventetider:
+  // klippets længde tælles nu fra det øjeblik lyden FAKTISK begynder at
+  // spille, ikke fra da vi bad om det.
+  let klipAfspilningsId = 0;
+
+  function afspilKlip(audio, startpunkt, varighedSekunder, gemPauseTimeout) {
+    const detteId = ++klipAfspilningsId;
+    audio.pause();
+
+    function startTaelling() {
+      if (detteId !== klipAfspilningsId) return; // et nyere klip er startet i mellemtiden
+      gemPauseTimeout(setTimeout(() => audio.pause(), varighedSekunder * 1000));
+    }
+
+    function startAfspilning() {
+      audio.addEventListener("playing", function paaPlaying() {
+        audio.removeEventListener("playing", paaPlaying);
+        startTaelling();
+      });
+      audio.play().catch(e => console.error("Kunne ikke afspille", e));
+    }
+
+    // Er vi allerede (stort set) ved startpunktet, venter vi ikke på en
+    // "seeked"-hændelse — den kan udeblive helt, hvis browseren vurderer
+    // at der ikke er noget at springe (det var den anden årsag til
+    // "skævt" klip: koden troede den havde sprunget til startpunktet,
+    // men browseren nåede det aldrig at bekræfte).
+    if (Math.abs(audio.currentTime - startpunkt) < 0.05) {
+      startAfspilning();
+    } else {
+      audio.addEventListener("seeked", function paaSeeked() {
+        audio.removeEventListener("seeked", paaSeeked);
+        if (detteId !== klipAfspilningsId) return;
+        startAfspilning();
+      });
+      audio.currentTime = startpunkt;
+    }
+  }
 
   // ---- Lydstyrke (gemmes lokalt, ikke knyttet til en bestemt dag) ----
   const LYDSTYRKE_NOEGLE = "oerehaenger-lydstyrke";
@@ -422,9 +509,7 @@
     const varighed = KLIP_TRIN[state.trinIndex];
     const startpunkt = (state.nuvaerendeSang.start_offset_ms || 0) / 1000;
     clearTimeout(spilTimeout);
-    audio.currentTime = startpunkt;
-    audio.play().catch(e => console.error("Kunne ikke afspille", e));
-    spilTimeout = setTimeout(() => audio.pause(), varighed * 1000);
+    afspilKlip(audio, startpunkt, varighed, id => { spilTimeout = id; });
   }
 
   function gaetIndsendt(vaerdi) {
@@ -466,8 +551,38 @@
     audio.pause();
     state.afsloeret = true;
     const antalBrugteTrin = rigtigtTrinIndex !== null ? rigtigtTrinIndex + 1 : KLIP_TRIN.length;
-    registrerResultat(rigtigtTrinIndex, antalBrugteTrin);
+    const resultat = registrerResultat(rigtigtTrinIndex, antalBrugteTrin);
+    // Vis hvad sangen var og om den blev gættet, i stedet for at hoppe
+    // videre til næste sang med det samme — man skal selv trykke videre.
+    // (Ophæver delvist beslutningen fra 2026-08-30 om ingen mellemresultat:
+    // denne skærm viser kun titel/kunstner/cover og om man gættede, IKKE
+    // klip-gitteret eller Apple/Spotify-links — de hører stadig kun til i
+    // det samlede overblik til sidst. Se beslutninger.md.)
+    renderSangAfsloering(resultat);
+  }
+
+  function fortsaetEfterAfsloering() {
     naesteSang();
+  }
+
+  function renderSangAfsloering(resultat) {
+    const sang = state.nuvaerendeSang;
+    const el = document.getElementById("spil");
+    const gaettetRigtigt = resultat.rigtigtTrin !== null;
+    const erSidsteSang = state.sangIndex >= state.dagensSange.length - 1;
+    el.innerHTML = `
+      <div class="afsloering">
+        <p class="dagstal">Sang ${state.sangIndex + 1} af ${state.dagensSange.length}</p>
+        ${sang.cover_url ? `<img class="cover" src="${sang.cover_url}" alt="" onerror="this.style.display='none'">` : ""}
+        <p class="kilde-label">Det var</p>
+        <h2>${escapeHtml(sang.titel)}</h2>
+        <p class="kunstner">${escapeHtml(sang.kunstner)}</p>
+        <div>
+          <span class="status-badge ${gaettetRigtigt ? "rigtigt" : "forkert"}">${gaettetRigtigt ? "Gættet!" : "Ikke gættet"}</span>
+        </div>
+        <button class="afspil-knap" onclick="fortsaetEfterAfsloering()">${erSidsteSang ? "Se samlet resultat" : "Næste sang →"}</button>
+      </div>
+    `;
   }
 
   function registrerResultat(rigtigtTrinIndex, antalBrugteTrin) {
@@ -710,9 +825,7 @@
     const varighed = KLIP_TRIN[bonusState.trinIndex];
     const startpunkt = (bonusState.nuvaerendeSang.start_offset_ms || 0) / 1000;
     clearTimeout(bonusSpilTimeout);
-    audio.currentTime = startpunkt;
-    audio.play().catch(e => console.error("Kunne ikke afspille", e));
-    bonusSpilTimeout = setTimeout(() => audio.pause(), varighed * 1000);
+    afspilKlip(audio, startpunkt, varighed, id => { bonusSpilTimeout = id; });
   }
 
   function gaetBonusIndsendt(vaerdi) {
@@ -796,11 +909,19 @@
     const sang = bonusState.nuvaerendeSang;
     const el = document.getElementById("spil");
     const erSidsteISvaeret = bonusState.indexIBatch >= bonusState.sange.length - 1;
-    const besked = gaettetRigtigt ? "Rigtigt!" : "Ikke gættet.";
     el.innerHTML = `
-      <p class="besked">${besked} Det var <strong>${escapeHtml(sang.titel)}</strong> — ${escapeHtml(sang.kunstner)}.</p>
-      <button class="knap" onclick="${erSidsteISvaeret ? "startBonusRunde()" : "naesteBonusSang()"}">${erSidsteISvaeret ? "🔁 Spil videre" : "Næste sang"}</button>
-      <p class="tilbage-link"><a href="#" onclick="visDagensResultat(); return false;">← Tilbage til dagens resultat</a></p>
+      <div class="afsloering">
+        <p class="dagstal">Spil videre — sang ${bonusState.indexIBatch + 1} af ${bonusState.sange.length}</p>
+        ${sang.cover_url ? `<img class="cover" src="${sang.cover_url}" alt="" onerror="this.style.display='none'">` : ""}
+        <p class="kilde-label">Det var</p>
+        <h2>${escapeHtml(sang.titel)}</h2>
+        <p class="kunstner">${escapeHtml(sang.kunstner)}</p>
+        <div>
+          <span class="status-badge ${gaettetRigtigt ? "rigtigt" : "forkert"}">${gaettetRigtigt ? "Gættet!" : "Ikke gættet"}</span>
+        </div>
+        <button class="knap" onclick="${erSidsteISvaeret ? "startBonusRunde()" : "naesteBonusSang()"}">${erSidsteISvaeret ? "🔁 Spil videre" : "Næste sang →"}</button>
+        <p class="tilbage-link"><a href="#" onclick="visDagensResultat(); return false;">← Tilbage til dagens resultat</a></p>
+      </div>
     `;
   }
 
