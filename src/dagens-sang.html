@@ -22,10 +22,15 @@
   }
   button { font-family: inherit; }
 
+  .layout {
+    max-width: 480px;
+    margin: 0 auto;
+  }
   .side {
     max-width: 480px;
     margin: 0 auto;
   }
+  .panel { display: none; }
 
   .topbar { margin-bottom: 20px; }
   .logo {
@@ -73,6 +78,28 @@
   .dagstal { color: #6b6b6b; font-size: 0.85em; margin: 0 0 6px; }
   .klip-info { color: #2b2b2b; font-size: 0.95em; margin: 0 0 14px; opacity: 0.85; }
   .besked { font-weight: 600; margin: 14px 0 0; }
+
+  /* ---- Vandret klip-bar under afspil-knappen, inspireret af songspot.net ---- */
+  .klip-bar { display: flex; gap: 6px; margin: 2px 0 18px; }
+  .klip-bar .klip-trin-bar {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #ddd6c8;
+    border-radius: 8px;
+    background: #fff;
+    color: #b8ae98;
+    font-size: 0.72em;
+    padding: 8px 2px;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+  .klip-bar .klip-trin-bar.brugt { border-color: #ddd6c8; color: #6b6b6b; background: #f4efe4; }
+  .klip-bar .klip-trin-bar.aktiv {
+    border-color: #d7263d;
+    color: #2b2b2b;
+    background: #fff;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(215,38,61,0.12);
+  }
   .resultat-overskrift { margin: 0 0 14px; }
 
   .afspil-knap {
@@ -220,24 +247,137 @@
     .afspil-knap { padding: 16px; font-size: 1.1em; }
     .gaet-felt { padding: 14px 16px; font-size: 1.05em; }
   }
+
+  /* ---- Bredt skærm: to sidepaneler i stedet for tom plads i siderne.
+     .side "unwrappes" (display:contents), så header/lydstyrke/#spil kan
+     placeres direkte i det store grid herunder — ikke to kopier af
+     lydstyrke-kontrollen, bare den samme flyttet visuelt om i layoutet. ---- */
+  @media (min-width: 1000px) {
+    body { padding: 72px 24px; }
+    .layout {
+      max-width: 1180px;
+      display: grid;
+      grid-template-columns: minmax(160px, 1fr) minmax(400px, 540px) minmax(160px, 1fr);
+      gap: 56px;
+      align-items: start;
+    }
+    .side { display: contents; }
+    .topbar { grid-column: 2; grid-row: 1; }
+    #spil { grid-column: 2; grid-row: 2; }
+    audio { grid-column: 2; }
+
+    #lydstyrke-kontrol {
+      grid-column: 3;
+      grid-row: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 6px 0 0;
+    }
+    #lydstyrke-kontrol label {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.72em;
+      color: #6b6b6b;
+    }
+    #lydstyrke-kontrol input[type="range"] { width: 100%; max-width: 100%; }
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .panel-venstre {
+      grid-column: 1;
+      grid-row: 1 / 3;
+      padding-top: 4px;
+    }
+    .sang-liste {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .sang-liste-raekke {
+      font-size: 0.85em;
+      color: #b8ae98;
+      border-bottom: 1px solid #eee6d8;
+      padding-bottom: 8px;
+    }
+    .sang-liste-raekke.kendt { color: #2b2b2b; }
+    .sang-liste-nr {
+      display: block;
+      font-size: 0.78em;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #b8ae98;
+      margin-bottom: 2px;
+    }
+    .sang-liste-raekke.kendt .sang-liste-nr { color: #6b6b6b; }
+    .panel-hoejre {
+      grid-column: 3;
+      grid-row: 2;
+    }
+    .panel-label {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.72em;
+      color: #6b6b6b;
+      margin: 0;
+    }
+    .panel-tal {
+      font-size: 2.4em;
+      font-weight: 700;
+      margin: 4px 0 0;
+    }
+    .panel-link {
+      margin-top: 24px;
+      color: #2b2b2b;
+      font-weight: 600;
+      font-size: 0.9em;
+      text-decoration: none;
+      border: 1px solid #ddd6c8;
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: inline-block;
+      width: fit-content;
+    }
+    .panel-link:hover { border-color: #d7263d; }
+    .panel-link[hidden] { display: none; }
+  }
 </style>
 </head>
 <body>
 
-<div class="side">
-  <header class="topbar">
-    <h1 class="logo">Ørehænger</h1>
-    <p class="undertekst">Gæt fem danske sange ud fra klip der vokser. Fem sange, én gang om dagen.</p>
-  </header>
+<div class="layout">
 
-  <div id="lydstyrke-kontrol">
-    <label for="lydstyrke-slider">🔉 Lydstyrke</label>
-    <input type="range" id="lydstyrke-slider" min="0" max="100" value="50">
+  <aside class="panel panel-venstre" aria-hidden="true">
+    <p class="panel-label">Dagens sange</p>
+    <div class="sang-liste" id="sang-liste"></div>
+  </aside>
+
+  <div class="side">
+    <header class="topbar">
+      <h1 class="logo">Ørehænger</h1>
+      <p class="undertekst">Gæt fem danske sange ud fra klip der vokser. Fem sange, én gang om dagen.</p>
+    </header>
+
+    <div id="lydstyrke-kontrol">
+      <label for="lydstyrke-slider">🔉 Lydstyrke</label>
+      <input type="range" id="lydstyrke-slider" min="0" max="100" value="50">
+    </div>
+
+    <div id="spil">Indlæser…</div>
+
+    <audio id="afspiller" style="display:none"></audio>
   </div>
 
-  <div id="spil">Indlæser…</div>
+  <aside class="panel panel-hoejre">
+    <p class="panel-label">Dag</p>
+    <p class="panel-tal" id="panel-dag-tal">—</p>
+    <a id="foreslaa-sang-link" class="panel-link" href="#" target="_blank" rel="noopener" hidden>💡 Foreslå en sang</a>
+  </aside>
 
-  <audio id="afspiller" style="display:none"></audio>
 </div>
 
 <script>
@@ -248,6 +388,11 @@
 
   const KLIP_TRIN = [0.1, 0.5, 2, 8, 15];
   const SANGE_PER_DAG = 5;
+
+  // Google Formular til sangforslag (oprettet af Emil, 2026-08-30) — se
+  // beslutninger.md. "💡 Foreslå en sang"-linket i højre sidepanel vises
+  // nu, fordi denne ikke længere er tom.
+  const FORESLAA_SANG_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfty48isOeLE1LogipDLgs5mlBlTd8UG0-fCV4mmpvtFZpTbw/viewform?usp=publish-editor";
 
   // Dag 1 = den dag fase 1-prototypen blev testet færdig. Ændres ikke —
   // det ville rykke rundt på hvilke sange der er "dagens sange" hvilken dag.
@@ -486,12 +631,14 @@
 
     const gemt = hentGemtResultat();
     if (gemt) {
+      opdaterSangListe(gemt.sange, gemt.sange.length);
       renderAlleredeSpillet(gemt);
       return;
     }
     state.dagensSange = dagensSangListe();
     state.sangIndex = 0;
     state.resultater = [];
+    opdaterSangListe(state.dagensSange, 0);
     startSang();
   }
 
@@ -543,6 +690,7 @@
 
   function sangIkkeFundet() {
     registrerResultat(null, 0);
+    opdaterSangListe(state.dagensSange, state.resultater.length);
     naesteSang();
   }
 
@@ -552,6 +700,7 @@
     state.afsloeret = true;
     const antalBrugteTrin = rigtigtTrinIndex !== null ? rigtigtTrinIndex + 1 : KLIP_TRIN.length;
     const resultat = registrerResultat(rigtigtTrinIndex, antalBrugteTrin);
+    opdaterSangListe(state.dagensSange, state.resultater.length);
     // Vis hvad sangen var og om den blev gættet, i stedet for at hoppe
     // videre til næste sang med det samme — man skal selv trykke videre.
     // (Ophæver delvist beslutningen fra 2026-08-30 om ingen mellemresultat:
@@ -647,6 +796,40 @@
     if (status) status.textContent = "Kunne ikke kopiere automatisk — teksten er markeret, tryk Ctrl/Cmd+C.";
   }
 
+  // ---- Klip-stigen i venstre sidepanel (kun synlig på brede skærme) ----
+  // Viser de fem klip-trin som en voksende stige og markerer hvor man er
+  // nået til — samme information som "Klip X af 5: Y sekunder" inde i
+  // selve kortet, bare som et visuelt overblik ved siden af. Rent
+  // informativt, ingen klik-funktion.
+  function opdaterKlipBar(trinIndex) {
+    const el = document.getElementById("klip-bar");
+    if (!el) return;
+    el.innerHTML = KLIP_TRIN.map((sek, i) => {
+      const klasse = i === trinIndex ? "aktiv" : i < trinIndex ? "brugt" : "";
+      const tekst = sek < 1 ? `${String(sek).replace(".", ",")}s` : `${sek}s`;
+      return `<div class="klip-trin-bar ${klasse}">${tekst}</div>`;
+    }).join("");
+  }
+
+  // ---- Dagens-sange-listen i venstre sidepanel (kun synlig på brede
+  // skærme) — viser IKKE en sangs titel før den sang er besvaret (gættet,
+  // sprunget over eller afsløret), som Emil bad om. `sange` kan enten
+  // være state.dagensSange (fulde sangobjekter) eller et gemt resultat
+  // (samme titel/kunstner-felter) — begge har det vi skal bruge her.
+  function opdaterSangListe(sange, antalKendte) {
+    const el = document.getElementById("sang-liste");
+    if (!el || !sange) return;
+    el.innerHTML = sange.map((sang, i) => {
+      const kendt = i < antalKendte;
+      return `
+        <div class="sang-liste-raekke ${kendt ? "kendt" : ""}">
+          <span class="sang-liste-nr">Sang ${i + 1}</span>
+          ${kendt ? escapeHtml(sang.titel) + " — " + escapeHtml(sang.kunstner) : ""}
+        </div>
+      `;
+    }).join("");
+  }
+
   // ---- Rendering ----
   function render(besked) {
     const sang = state.nuvaerendeSang;
@@ -669,6 +852,7 @@
       <p class="dagstal">Dagens sange #${dagNummer} — sang ${state.sangIndex + 1} af ${state.dagensSange.length}</p>
       <p class="klip-info">Klip ${state.trinIndex + 1} af ${KLIP_TRIN.length}: ${varighed} sekund${varighed === 1 ? "" : "er"}</p>
       <button class="afspil-knap" onclick="spilKlip()">▶ Afspil klip</button>
+      <div class="klip-bar" id="klip-bar"></div>
     `;
 
     if (besked === "forkert") html += `<p class="besked">Forkert. Næste klip er længere.</p>`;
@@ -689,6 +873,7 @@
       input.focus();
       opdaterForslag("");
     }
+    opdaterKlipBar(state.trinIndex);
   }
 
   function renderSamletResultat(heltResultat) {
@@ -882,6 +1067,7 @@
       <p class="dagstal">Spil videre — sang ${bonusState.indexIBatch + 1} af ${bonusState.sange.length}</p>
       <p class="klip-info">Klip ${bonusState.trinIndex + 1} af ${KLIP_TRIN.length}: ${varighed} sekund${varighed === 1 ? "" : "er"}</p>
       <button class="afspil-knap" onclick="spilBonusKlip()">▶ Afspil klip</button>
+      <div class="klip-bar" id="klip-bar"></div>
     `;
 
     if (besked === "forkert") html += `<p class="besked">Forkert. Næste klip er længere.</p>`;
@@ -903,6 +1089,7 @@
       input.focus();
       opdaterBonusForslag("");
     }
+    opdaterKlipBar(bonusState.trinIndex);
   }
 
   function renderBonusAfsloering(gaettetRigtigt) {
@@ -974,6 +1161,25 @@
     }
   }, 15000);
 
+  // Dag-tallet i højre sidepanel (kun synligt på brede skærme, se CSS) —
+  // dagNummer er allerede regnet ud foroven, ingen grund til at vente på
+  // hentSangeData() for at vise det.
+  function opsaetPanelDag() {
+    const el = document.getElementById("panel-dag-tal");
+    if (el) el.textContent = "#" + dagNummer;
+  }
+
+  function opsaetForeslaaSangLink() {
+    const link = document.getElementById("foreslaa-sang-link");
+    if (!link) return;
+    if (FORESLAA_SANG_URL) {
+      link.href = FORESLAA_SANG_URL;
+      link.hidden = false;
+    }
+  }
+
+  opsaetPanelDag();
+  opsaetForeslaaSangLink();
   opsaetLydstyrkeKontrol();
   start()
     .then(() => { opstartFaerdig = true; })
