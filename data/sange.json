@@ -2691,7 +2691,7 @@
     "noter": "Dansk kunstner, verdenshit"
   },
   {
-    "id": "l-i-g-a-skylder-dig-ik-noget",
+    "id": "liga-skylder-dig-ik-noget",
     "titel": "Skylder dig ik' noget",
     "kunstner": "L.I.G.A",
     "aar": 2013,
@@ -2702,7 +2702,7 @@
     "svaerhed": 4,
     "kategori": null,
     "alternative_titler": [
-      "Skylder dig ik noget"
+      "Skylder Dig Ik Noget"
     ],
     "alternative_kunstnere": [],
     "lyd_kilde": "itunes",
@@ -4729,27 +4729,6 @@
     "noter": "Fra Spotify-spilleliste"
   },
   {
-    "id": "johny-cola-stik-mig-en-oel",
-    "titel": "Stik Mig En Øl",
-    "kunstner": "Johny Cola",
-    "aar": 2026,
-    "aarti": "20er",
-    "genre": [
-      "Dance"
-    ],
-    "svaerhed": 5,
-    "kategori": null,
-    "alternative_titler": [],
-    "alternative_kunstnere": [],
-    "lyd_kilde": "itunes",
-    "lyd_id": "1882719656",
-    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/d1/9b/9fd19bb2-0cbd-ac2c-02c0-debeca795527/mzaf_6645134026087982366.plus.aac.p.m4a",
-    "start_offset_ms": 0,
-    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f3/19/90/f31990f4-0ff7-3d55-df7c-27843cea3b67/859733186020_cover.jpg/100x100bb.jpg",
-    "link_ud": "https://music.apple.com/dk/album/stik-mig-en-%C3%B8l/1882719561?i=1882719656&uo=4",
-    "noter": "Fra Spotify-spilleliste"
-  },
-  {
     "id": "one-two-den-bedste-tid",
     "titel": "Den Bedste Tid",
     "kunstner": "One Two",
@@ -5592,6 +5571,27 @@
     "noter": "Ukendt Kunstner-hit"
   },
   {
+    "id": "rasmus-seebach-uanset",
+    "titel": "Uanset",
+    "kunstner": "Rasmus Seebach",
+    "aar": 2019,
+    "aarti": "10er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 2,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1482909949",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/5a/36/04/5a36049a-9844-0b0c-8915-af3806117e67/mzaf_16121140252793955871.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/5d/09/0e/5d090e97-648d-0afd-0138-e8376c3c844a/19UMGIM90220.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/uanset/1482909787?i=1482909949&uo=4",
+    "noter": "Rasmus Seebach-hit"
+  },
+  {
     "id": "djames-braun-fugle",
     "titel": "Fugle",
     "kunstner": "Djämes Braun",
@@ -5985,11 +5985,11 @@
     "alternative_titler": [],
     "alternative_kunstnere": [],
     "lyd_kilde": "itunes",
-    "lyd_id": "1442826482",
-    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d0/b5/c9/d0b5c96a-4bd5-4eee-928b-90161f0cefd0/mzaf_3861903426549184449.plus.aac.p.m4a",
+    "lyd_id": "1442785110",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/cd/6c/2a/cd6c2a38-e872-ad5b-9c3c-5f0f3d60c2ab/mzaf_12983865287382892061.plus.aac.p.m4a",
     "start_offset_ms": 0,
-    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/9a/42/11/9a4211e7-cc42-b837-b9a8-34ee28bcac9b/05700771100651.rgb.jpg/100x100bb.jpg",
-    "link_ud": "https://music.apple.com/dk/album/igen-igen/1442826473?i=1442826482&uo=4",
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/6f/d8/c2/6fd8c226-f088-5ac3-dd3d-47b0ee5854de/00602537556755.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/igen-igen/1442784909?i=1442785110&uo=4",
     "noter": "Nephew-hit"
   },
   {
@@ -6098,6 +6098,27 @@
     "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fb/34/14/fb341498-5bfd-e2f2-ed12-ec0416a4e4f1/196872802269.jpg/100x100bb.jpg",
     "link_ud": "https://music.apple.com/dk/album/100-dage/1789533778?i=1789533781&uo=4",
     "noter": "Fra Spotify-spilleliste"
+  },
+  {
+    "id": "medina-ensom",
+    "titel": "Ensom",
+    "kunstner": "Medina",
+    "aar": 2009,
+    "aarti": "00er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 2,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1443138661",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/67/11/ef/6711efa5-04f5-fd22-9c9d-4f893a383c8d/mzaf_6290980480696686987.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/c9/e9/69/c9e969f9-5641-6230-59d4-b59c0aeda566/12UMGIM45177.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/ensom/1443138319?i=1443138661&uo=4",
+    "noter": "Medina-hit"
   },
   {
     "id": "johnny-deluxe-drenge-som-mig",
@@ -9190,27 +9211,6 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
-    "id": "johny-cola-dj-vision-volvo-b18-210",
-    "titel": "Volvo B18-210",
-    "kunstner": "Johny Cola, DJ Vision",
-    "aar": 2025,
-    "aarti": "20er",
-    "genre": [
-      "Dance"
-    ],
-    "svaerhed": 5,
-    "kategori": null,
-    "alternative_titler": [],
-    "alternative_kunstnere": [],
-    "lyd_kilde": "itunes",
-    "lyd_id": "1850560396",
-    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/95/4b/24/954b24c4-f77c-8bd4-476a-324a4aee810d/mzaf_1978845461776353444.plus.aac.p.m4a",
-    "start_offset_ms": 0,
-    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/06/e6/b1/06e6b116-596b-4ae2-ec25-71804dfea68b/859721609357_cover.jpg/100x100bb.jpg",
-    "link_ud": "https://music.apple.com/dk/album/volvo-b18-210/1850560393?i=1850560396&uo=4",
-    "noter": "Fra Spotify-spilleliste (dybere grav)"
-  },
-  {
     "id": "oestkyst-hustlers-han-faar-for-lidt",
     "titel": "Han Får For Lidt",
     "kunstner": "Østkyst Hustlers",
@@ -9229,48 +9229,6 @@
     "start_offset_ms": 0,
     "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/38/35/f4/mzi.mbjxngqg.jpg/100x100bb.jpg",
     "link_ud": "https://music.apple.com/dk/album/han-f%C3%A5r-for-lidt/200302719?i=200303447&uo=4",
-    "noter": "Fra Spotify-spilleliste (dybere grav)"
-  },
-  {
-    "id": "johny-cola-i-en-lille-baad-gynger",
-    "titel": "I En Lille Båd Gynger",
-    "kunstner": "Johny Cola",
-    "aar": 2025,
-    "aarti": "20er",
-    "genre": [
-      "Dance"
-    ],
-    "svaerhed": 5,
-    "kategori": null,
-    "alternative_titler": [],
-    "alternative_kunstnere": [],
-    "lyd_kilde": "itunes",
-    "lyd_id": "1819415294",
-    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/6e/15/8d6e151a-1a9e-4047-4b40-84f7b0cd8819/mzaf_9023726066105730638.plus.aac.p.m4a",
-    "start_offset_ms": 0,
-    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/de/61/c3/de61c3e4-bf2c-8bc4-e13c-81c6b335c0f6/859708438543_cover.jpg/100x100bb.jpg",
-    "link_ud": "https://music.apple.com/dk/album/i-en-lille-b%C3%A5d-gynger/1819415077?i=1819415294&uo=4",
-    "noter": "Fra Spotify-spilleliste (dybere grav)"
-  },
-  {
-    "id": "johny-cola-alt-det-som-ingen-ser",
-    "titel": "Alt Det Som Ingen Ser",
-    "kunstner": "Johny Cola",
-    "aar": 2025,
-    "aarti": "20er",
-    "genre": [
-      "Pop"
-    ],
-    "svaerhed": 5,
-    "kategori": null,
-    "alternative_titler": [],
-    "alternative_kunstnere": [],
-    "lyd_kilde": "itunes",
-    "lyd_id": "1862867036",
-    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/38/73/8b/38738ba3-8058-0394-a040-c1befaa7b4b0/mzaf_9079060449072841025.plus.aac.p.m4a",
-    "start_offset_ms": 0,
-    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a2/a3/f4/a2a3f470-eac2-495f-c7e0-a4168a5405c2/859726292912_cover.jpg/100x100bb.jpg",
-    "link_ud": "https://music.apple.com/dk/album/alt-det-som-ingen-ser/1862866572?i=1862867036&uo=4",
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
@@ -10441,6 +10399,27 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
+    "id": "laban-kold-som-is",
+    "titel": "Kold som is",
+    "kunstner": "Laban",
+    "aar": 1985,
+    "aarti": "80er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 5,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1221337806",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/39/24/18/39241889-84e1-9618-a0aa-5659bc0b45c7/mzaf_9630572832752992464.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/14/ef/1b/14ef1b7c-e618-8349-cc0e-26b8e013ce39/084247964721.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/kold-som-is/1221337790?i=1221337806&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
     "id": "saveus-time-can-heal-a-man",
     "titel": "Time Can Heal A Man",
     "kunstner": "Saveus",
@@ -10543,6 +10522,27 @@
     "start_offset_ms": 0,
     "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/64/cf/89/64cf89db-93e8-f3f4-a9a1-aa677b905721/196872019117.jpg/100x100bb.jpg",
     "link_ud": "https://music.apple.com/dk/album/smooth-criminal/1742190681?i=1742190990&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
+    "id": "zuuz-lelele",
+    "titel": "LELELE",
+    "kunstner": "ZUUZ",
+    "aar": 2022,
+    "aarti": "20er",
+    "genre": [
+      "Hip-Hop/Rap"
+    ],
+    "svaerhed": 4,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1624455582",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/f5/4d/18/f54d185a-8d87-a330-06c7-169587e68d36/mzaf_15090931479742987258.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a1/d5/cf/a1d5cff2-f89b-506c-f790-ee9f0d6c4890/196589181831.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/allo/1624455475?i=1624455582&uo=4",
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
@@ -10674,6 +10674,27 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
+    "id": "artigeardit-lamin-vaagen",
+    "titel": "Vågen",
+    "kunstner": "Artigeardit, Lamin",
+    "aar": 2022,
+    "aarti": "20er",
+    "genre": [
+      "Hip-Hop/Rap"
+    ],
+    "svaerhed": 3,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1623713459",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/b4/d4/4a/b4d44a03-d5c6-6b7f-58d0-a48093e0cc3e/mzaf_6707733349567121739.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/3a/7f/0a/3a7f0ae0-3f00-8ecb-12cf-458b39a93b24/22UMGIM50250.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/v%C3%A5gen/1623713441?i=1623713459&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
     "id": "gilli-1-sammen",
     "titel": "1 Sammen",
     "kunstner": "Gilli",
@@ -10758,6 +10779,27 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
+    "id": "lockdown-bloody-mary",
+    "titel": "Bloody Mary",
+    "kunstner": "Lockdown",
+    "aar": 2022,
+    "aarti": "20er",
+    "genre": [
+      "Electronic"
+    ],
+    "svaerhed": 4,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1661523965",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1e/b9/08/1eb90877-82c6-8177-a1d6-3fab7df968e3/mzaf_513456694939207543.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d6/5e/a0/d65ea0a6-c13c-aaa2-3916-f8ed492e6db8/3701421561817.png/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/bloody-mary/1661523964?i=1661523965&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
     "id": "citybois-sig-mig",
     "titel": "Sig Mig",
     "kunstner": "Citybois",
@@ -10800,6 +10842,27 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
+    "id": "skinz-i-min-zone",
+    "titel": "I min zone",
+    "kunstner": "Skinz",
+    "aar": 2017,
+    "aarti": "10er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 3,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1386115341",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/87/ce/6a/87ce6ad9-568e-4a42-f412-4f6dc5235a1e/mzaf_3288198220860182611.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c2/81/48/c28148ca-72d7-574d-32ba-f777f0b02377/190295622244.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/i-min-zone/1386114332?i=1386115341&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
     "id": "skinz-malibu",
     "titel": "Malibu",
     "kunstner": "Skinz",
@@ -10818,6 +10881,27 @@
     "start_offset_ms": 0,
     "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c2/81/48/c28148ca-72d7-574d-32ba-f777f0b02377/190295622244.jpg/100x100bb.jpg",
     "link_ud": "https://music.apple.com/dk/album/malibu/1386114332?i=1386114878&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
+    "id": "skinz-jeg-har-en-pige",
+    "titel": "Jeg har en pige",
+    "kunstner": "Skinz",
+    "aar": 2017,
+    "aarti": "10er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 3,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1386115331",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/26/5a/25/265a25a3-c358-cd31-1cc2-9d5f67489474/mzaf_8029704447585900713.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c2/81/48/c28148ca-72d7-574d-32ba-f777f0b02377/190295622244.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/jeg-har-en-pige/1386114332?i=1386115331&uo=4",
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
@@ -10888,6 +10972,27 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
+    "id": "hjalmer-hvis-du-gaar",
+    "titel": "Hvis Du Går",
+    "kunstner": "Hjalmer",
+    "aar": 2017,
+    "aarti": "10er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 4,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1444326032",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ad/f0/02/adf00240-f6dc-a7ff-d78d-c4a83b7f0e98/mzaf_18101320886556144136.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/8e/1e/52/8e1e52fc-c0dc-a859-2638-9a1d735dcea3/00602567086505.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/hvis-du-g%C3%A5r/1444326019?i=1444326032&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
     "id": "kasper-juul-alene",
     "titel": "Alene",
     "kunstner": "Kasper Juul",
@@ -10909,6 +11014,27 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
+    "id": "kesi-x",
+    "titel": "X",
+    "kunstner": "KESI",
+    "aar": 2019,
+    "aarti": "10er",
+    "genre": [
+      "Hip-Hop/Rap"
+    ],
+    "svaerhed": 3,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1448996369",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/de/a8/c4/dea8c4b6-29b9-f1ef-e603-695d9d3ab2e6/mzaf_12540738060068823728.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/71/93/f2/7193f2da-c826-0b00-4662-734f103f9b7a/886447508619.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/x/1448996365?i=1448996369&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
     "id": "boelle-bob-rapport-fra-andeby",
     "titel": "Rapport Fra Andeby",
     "kunstner": "Bølle-Bob",
@@ -10927,6 +11053,27 @@
     "start_offset_ms": 0,
     "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/a5/66/53/a5665345-d8b4-c439-e2e6-9008eccd07de/mzi.mvubneyo.jpg/100x100bb.jpg",
     "link_ud": "https://music.apple.com/dk/album/rapport-fra-andeby/377925691?i=377925702&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
+    "id": "gulddreng-se-mig-nu",
+    "titel": "Se Mig Nu",
+    "kunstner": "Gulddreng",
+    "aar": 2017,
+    "aarti": "10er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 3,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1444586182",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/45/15/57/451557f4-8f13-3bd7-7113-254e3b9628f9/mzaf_11794676953676131723.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/1e/91/88/1e918840-f3c3-210a-fcbc-24fa1e2e5278/00602567307884.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/upn/1444586178?i=1444586182&uo=4",
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
@@ -10974,6 +11121,27 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
+    "id": "magtens-korridorer-milan-alle",
+    "titel": "Milan Allé",
+    "kunstner": "Magtens Korridorer",
+    "aar": 2009,
+    "aarti": "00er",
+    "genre": [
+      "Rock"
+    ],
+    "svaerhed": 3,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1442445427",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/39/39/7d/39397dd9-a391-ec78-df0d-5f06e5aa4693/mzaf_4015300148942595300.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/d0/63/46/d06346d9-a45f-1636-7896-94d7e3550a09/00602527217208.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/milan-all%C3%A9/1442445425?i=1442445427&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
     "id": "l-o-c-xxxcouture",
     "titel": "XxxCouture",
     "kunstner": "L.O.C.",
@@ -11013,6 +11181,27 @@
     "start_offset_ms": 0,
     "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/47/af/ad/47afad1b-8464-e6cb-e4ba-ad074b444fdf/05700771101405.rgb.jpg/100x100bb.jpg",
     "link_ud": "https://music.apple.com/dk/album/va-fangool/1442358325?i=1442358899&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
+    "id": "juncker-mogens-og-karen",
+    "titel": "Mogens og Karen",
+    "kunstner": "Juncker",
+    "aar": 2004,
+    "aarti": "00er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 4,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "482324386",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/d7/3e/a8/d73ea809-b503-5b30-bf49-5677d18a4ac5/mzaf_13612900886648856811.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9a/ee/52/9aee5287-a468-84c6-7ca9-2c98ade98357/5099751743521.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/mogens-og-karen/482324380?i=482324386&uo=4",
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
@@ -11121,6 +11310,27 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
+    "id": "carpark-north-save-me-from-myself",
+    "titel": "Save Me From Myself",
+    "kunstner": "Carpark North",
+    "aar": 2008,
+    "aarti": "00er",
+    "genre": [
+      "Rock"
+    ],
+    "svaerhed": 3,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1442847039",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ab/60/bf/ab60bf6c-9e83-a178-07a6-ef7fa18614b7/mzaf_7465192812746860655.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/89/94/b9/8994b9f3-d767-035a-5ebf-e5c363bc7dd7/05700771101153.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/save-me-from-myself/1442847027?i=1442847039&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
     "id": "magtens-korridorer-nordhavn-station",
     "titel": "Nordhavn Station",
     "kunstner": "Magtens Korridorer",
@@ -11139,6 +11349,27 @@
     "start_offset_ms": 0,
     "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/d2/39/71/d23971a1-23c7-4f67-844b-09b63267755a/cover.jpg/100x100bb.jpg",
     "link_ud": "https://music.apple.com/dk/album/nordhavn-station-live-b%C3%B8gescenen-2012/665648802?i=665648945&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
+    "id": "outlandish-guantanamo",
+    "titel": "Guantanamo",
+    "kunstner": "Outlandish",
+    "aar": 2002,
+    "aarti": "00er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 2,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "300882739",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/49/9d/95/499d95d9-60a4-634e-5ce5-1ed4005ca4af/mzaf_5912769051918573261.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1e/bb/83/1ebb833b-825e-97de-65a8-f46abcaa0075/888880315519.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/guantanamo/300882726?i=300882739&uo=4",
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
@@ -11205,6 +11436,48 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
+    "id": "carpark-north-shall-we-be-grateful",
+    "titel": "Shall We Be Grateful",
+    "kunstner": "Carpark North",
+    "aar": 2010,
+    "aarti": "10er",
+    "genre": [
+      "Rock"
+    ],
+    "svaerhed": 3,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1442847035",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6c/37/59/6c3759aa-00a3-c2b7-f37a-298a94b5a994/mzaf_12011414123642555894.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/89/94/b9/8994b9f3-d767-035a-5ebf-e5c363bc7dd7/05700771101153.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/shall-we-be-grateful/1442847027?i=1442847035&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
+    "id": "saybia-the-day-after-tomorrow",
+    "titel": "The Day After Tomorrow",
+    "kunstner": "Saybia",
+    "aar": 2002,
+    "aarti": "00er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 3,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "695699157",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/6c/74/e7/6c74e716-1c0a-1481-67fd-882d1ea19685/mzaf_9810622797160865824.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/f8/bd/18/f8bd183b-4c74-7d2f-000f-9cdeedc5890d/724353798550.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/the-day-after-tomorrow/695698681?i=695699157&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
     "id": "private-crucify-my-heart",
     "titel": "Crucify My Heart",
     "kunstner": "Private",
@@ -11223,6 +11496,27 @@
     "start_offset_ms": 0,
     "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/38/75/29/3875290c-7a05-5685-c2ff-5e9036695018/00600753030776.rgb.jpg/100x100bb.jpg",
     "link_ud": "https://music.apple.com/dk/album/crucify-my-heart/1442711185?i=1442711544&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
+    "id": "isam-b-i-danmark-er-jeg-foedt",
+    "titel": "I Danmark Er Jeg Født",
+    "kunstner": "Isam B",
+    "aar": 2007,
+    "aarti": "00er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 1,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1016212559",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/22/4f/96/224f966b-eedf-e6ee-25e0-3c6b5fd52289/mzaf_18352942671226023925.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/87/82/ca/8782ca0a-cb88-fbc9-5be5-e47f36a97f54/886445310856.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/i-danmark-er-jeg-f%C3%B8dt/1016212437?i=1016212559&uo=4",
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
@@ -11331,6 +11625,27 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
+    "id": "aqua-cartoon-heroes",
+    "titel": "Cartoon Heroes",
+    "kunstner": "Aqua",
+    "aar": 2000,
+    "aarti": "00er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 1,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1444272063",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ca/eb/2a/caeb2a8c-c969-945a-be76-31347db3c768/mzaf_7823416377606160248.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c0/61/35/c0613512-f728-0020-576f-7337a23947c2/00602557884371.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/cartoon-heroes-tnt-mix/1444271646?i=1444272063&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
     "id": "burhan-g-who-is-he",
     "titel": "Who Is He?",
     "kunstner": "Burhan G",
@@ -11394,6 +11709,27 @@
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
+    "id": "alphabeat-love-sea",
+    "titel": "Love Sea",
+    "kunstner": "Alphabeat",
+    "aar": 2012,
+    "aarti": "10er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 2,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1445312911",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ab/60/25/ab60257c-fee1-1a4e-c078-a953165c9f69/mzaf_10192947450503876640.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/c3/1f/e1/c31fe1a6-cb52-9b25-e8e3-aabdf5131b97/00602537141814.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/love-sea/1445312896?i=1445312911&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
     "id": "outlandish-i-only-ask-of-god",
     "titel": "I Only Ask of God",
     "kunstner": "Outlandish",
@@ -11412,6 +11748,27 @@
     "start_offset_ms": 0,
     "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/40/79/91/4079914e-42eb-b71b-b2c7-5cba8dea405d/828768358429.jpg/100x100bb.jpg",
     "link_ud": "https://music.apple.com/dk/album/i-only-ask-of-god/164222650?i=164224073&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
+    "id": "julie-every-little-part-of-me",
+    "titel": "Every Little Part of Me",
+    "kunstner": "Julie",
+    "aar": 2002,
+    "aarti": "00er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 3,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "696487855",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/b8/ac/df/b8acdf1f-c491-3257-a6cb-cd85d376565a/mzaf_17473908611919654603.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/8d/86/dd/8d86dd8e-2649-eff9-7308-64c3bd2de946/0724355179654_1404x1404_300dpi.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/every-little-part-of-me/696487650?i=696487855&uo=4",
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
@@ -11538,6 +11895,27 @@
     "start_offset_ms": 0,
     "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/22/87/77/2287775e-db69-877b-7171-086cb0387d79/886443663879.jpg/100x100bb.jpg",
     "link_ud": "https://music.apple.com/dk/album/landet/569822483?i=569822488&uo=4",
+    "noter": "Fra Spotify-spilleliste (dybere grav)"
+  },
+  {
+    "id": "liga-julia",
+    "titel": "Julia",
+    "kunstner": "LIGA",
+    "aar": 2014,
+    "aarti": "10er",
+    "genre": [
+      "Pop"
+    ],
+    "svaerhed": 4,
+    "kategori": null,
+    "alternative_titler": [],
+    "alternative_kunstnere": [],
+    "lyd_kilde": "itunes",
+    "lyd_id": "1442555730",
+    "lyd_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/81/c0/79/81c0793c-eb68-a843-8210-1f179b5296a0/mzaf_14083955464057195549.plus.aac.p.m4a",
+    "start_offset_ms": 0,
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/66/c1/7f/66c17f53-7a76-411a-0ec2-2725f4122249/00602537793426.rgb.jpg/100x100bb.jpg",
+    "link_ud": "https://music.apple.com/dk/album/julia/1442555714?i=1442555730&uo=4",
     "noter": "Fra Spotify-spilleliste (dybere grav)"
   },
   {
