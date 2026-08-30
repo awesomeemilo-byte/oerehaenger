@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ørehænger — dagens sang</title>
+<style>
+  body {
+    font-family: sans-serif;
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 0 16px;
+    line-height: 1.5;
+  }
+  h1 { margin-bottom: 0; }
+  .undertitel { margin-top: 4px; color: #444; }
+  button {
+    padding: 8px 12px;
+    margin: 4px 4px 4px 0;
+  }
+  input[type="text"] {
+    padding: 8px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #spil {
+    border-top: 1px solid #ccc;
+    padding-top: 16px;
+    margin-top: 16px;
+  }
+  .fejl { color: #a00; }
+  #forslag-liste { margin: 6px 0 4px; }
+  #forslag-liste button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    margin: 2px 0;
+  }
+  #forslag-liste .ingen-match { opacity: 0.6; margin: 4px 0; }
+  .grid {
+    font-size: 1.4em;
+    letter-spacing: 4px;
+    margin: 6px 0;
+  }
+  .grid-samlet .grid { margin: 4px 0; }
+  textarea#del-tekst {
+    width: 100%;
+    box-sizing: border-box;
+    height: 8em;
+    font-family: monospace;
+    margin: 6px 0;
+  }
+  .sang-recap {
+    border-top: 1px solid #eee;
+    padding: 6px 0;
+  }
+  #lydstyrke-kontrol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  #lydstyrke-kontrol input[type="range"] {
+    flex: 1;
+    max-width: 200px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Ørehænger</h1>
+<p class="undertitel">Gæt fem danske sange ud fra klip der vokser. Fem sange, én gang om dagen.</p>
+
+<div id="lydstyrke-kontrol">
+  <label for="lydstyrke-slider">🔉 Lydstyrke</label>
+  <input type="range" id="lydstyrke-slider" min="0" max="100" value="50">
+</div>
+
+<div id="spil">Indlæser…</div>
+
+<audio id="afspiller" style="display:none"></audio>
+
+<script>
+  // ---- Datagrundlag: data/sange.json (genereret automatisk fra
+  // data/sange.csv af GitHub Actions — se docs/beslutninger.md).
+  // Fyldes af hentSangeData() ved opstart, ikke hardkodet her længere.
+  let SANGE = [];
+
+  const KLIP_TRIN = [0.1, 0.5, 2, 8, 15];
+  const SANGE_PER_DAG = 5;
+
+  // Dag 1 = den dag fase 1-prototypen blev testet færdig. Ændres ikke —
+  // det ville rykke rundt på hvilke sange der er "dagens sange" hvilken dag.
+  const EPOKE_DATO = "2026-08-30";
+
+  // ---- Dagens dato i dansk tid (ikke UTC — håndterer selv sommertid) ----
+  function dagensDatoIDanmark() {
+    return new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Europe/Copenhagen",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).format(new Date());
+  }
+
+  function dageMellem(dato1, dato2) {
+    const [y1, m1, d1] = dato1.split("-").map(Number);
+    const [y2, m2, d2] = dato2.split("-").map(Number);
+    const t1 = Date.UTC(y1, m1 - 1, d1);
+    const t2 = Date.UTC(y2, m2 - 1, d2);
+    return Math.round((t2 - t1) / 86400000);
+  }
+
+  const idagDato = dagensDatoIDanmark();
+  const dagNummer = dageMellem(EPOKE_DATO, idagDato) + 1; // dag 1, 2, 3, ...
+
+  // Vælger SANGE_PER_DAG forskellige sange til i dag, ved at gå gennem
+  // sangpuljen i rækkefølge og starte et nyt sted hver dag. Med kun ti
+  // sange i puljen betyder det puljen går i ring hver 2. dag — det retter
+  // sig selv når der kommer flere sange i data/sange.csv.
+  function dagensSangListe() {
+    const n = SANGE.length;
+    const start = ((dagNummer - 1) * SANGE_PER_DAG) % n;
+    const valgte = [];
+    for (let i = 0; i < Math.min(SANGE_PER_DAG, n); i++) {
+      valgte.push(SANGE[(start + i) % n]);
+    }
+    return valgte;
+  }
+
+  const state = {
+    dagensSange: [],
+    sangIndex: 0,
+    trinIndex: 0,
+    afsloeret: false,
+    nuvaerendeSang: null,
+    resultater: [],
+  };
+
+  let spilTimeout = null;
+
+  // ---- Lydstyrke (gemmes lokalt, ikke knyttet til en bestemt dag) ----
+  const LYDSTYRKE_NOEGLE = "oerehaenger-lydstyrke";
+
+  function hentGemtLydstyrke() {
+    try {
+      const gemt = localStorage.getItem(LYDSTYRKE_NOEGLE);
+      const tal = gemt === null ? 50 : Number(gemt);
+      return Number.isFinite(tal) ? Math.min(100, Math.max(0, tal)) : 50;
+    } catch (e) {
+      return 50;
+    }
+  }
+
+  function saetLydstyrke(procent) {
+    const audio = document.getElementById("afspiller");
+    if (audio) audio.volume = procent / 100;
+    try {
+      localStorage.setItem(LYDSTYRKE_NOEGLE, String(procent));
+    } catch (e) {
+      console.error("Kunne ikke gemme lydstyrke", e);
+    }
+  }
+
+  function opsaetLydstyrkeKontrol() {
+    try {
+      const slider = document.getElementById("lydstyrke-slider");
+      if (!slider) return;
+      const gemtProcent = hentGemtLydstyrke();
+      slider.value = gemtProcent;
+      saetLydstyrke(gemtProcent);
+      slider.addEventListener("input", () => saetLydstyrke(Number(slider.value)));
+    } catch (e) {
+      // Lydstyrke-kontrollen må aldrig kunne vælte resten af opstarten.
+      console.error("Kunne ikke sætte lydstyrke-kontrol op", e);
+    }
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[c]));
+  }
+
+  function normaliser(s) {
+    return String(s)
+      .toLowerCase()
+      .normalize("NFC")
+      .replace(/[^\p{L}\p{N}\s]/gu, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  // ---- Gem/hent dagens samlede resultat lokalt (ikke en cookie, intet login) ----
+  function lagerNoegle() {
+    return `oerehaenger-dagens-${idagDato}`;
+  }
+
+  function hentGemtResultat() {
+    try {
+      const raw = localStorage.getItem(lagerNoegle());
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      // Et tidligere, forladt format af spillet gemte data i en anden facon
+      // under samme nøgle (kun én sang i stedet for et "sange"-array).
+      // Sådan gammelt data skal ikke få spillet til at gå ned — smid det væk
+      // og start en frisk runde i stedet.
+      if (!parsed || !Array.isArray(parsed.sange)) {
+        console.error("Gemt resultat har et ukendt format — ignorerer det", parsed);
+        localStorage.removeItem(lagerNoegle());
+        return null;
+      }
+      return parsed;
+    } catch (e) {
+      console.error("Kunne ikke læse gemt resultat", e);
+      return null;
+    }
+  }
+
+  function gemResultat(heltResultat) {
+    try {
+      localStorage.setItem(lagerNoegle(), JSON.stringify(heltResultat));
+    } catch (e) {
+      console.error("Kunne ikke gemme resultat lokalt", e);
+    }
+  }
+
+  // ---- Hent sangdata (én gang, ved opstart — ikke live per sang) ----
+  // data/sange.json indeholder allerede lyd-URL, årstal, genre og
+  // startpunkt for hver sang, fundet af GitHub-robotten på forhånd. Ingen
+  // JSONP nødvendig længere — det er en almindelig lokal fil, hentet med
+  // fetch(). Kræver at siden åbnes via en rigtig server (fx GitHub Pages),
+  // ikke ved at dobbeltklikke filen direkte.
+  async function hentSangeData() {
+    const svar = await fetch("../data/sange.json");
+    if (!svar.ok) {
+      throw new Error(`Kunne ikke hente data/sange.json (status ${svar.status})`);
+    }
+    const data = await svar.json();
+    if (!Array.isArray(data)) {
+      throw new Error("data/sange.json har et uventet format (ikke en liste)");
+    }
+    const gyldige = data.filter(s => s && s.titel && s.kunstner && s.lyd_url);
+    if (gyldige.length === 0) {
+      throw new Error("data/sange.json er tom eller mangler lyd-links — kør generator-scriptet (se docs/beslutninger.md)");
+    }
+    return gyldige;
+  }
+
+  // Spotify: intet API-kald, bare et søgelink — kræver ingen konto eller
+  // nøgler. Se beslutninger.md, 2026-08-30, for hvorfor det ikke er et
+  // præcist link.
+  function spotifySoegeLink(sang) {
+    return `https://open.spotify.com/search/${encodeURIComponent(sang.titel + " " + sang.kunstner)}`;
+  }
+
+  // ---- Opstart ----
+  async function start() {
+    document.getElementById("spil").innerHTML = "<p>Henter dagens sange…</p>";
+    SANGE = await hentSangeData();
+
+    const gemt = hentGemtResultat();
+    if (gemt) {
+      renderAlleredeSpillet(gemt);
+      return;
+    }
+    state.dagensSange = dagensSangListe();
+    state.sangIndex = 0;
+    state.resultater = [];
+    startSang();
+  }
+
+  function startSang() {
+    state.trinIndex = 0;
+    state.afsloeret = false;
+    state.nuvaerendeSang = state.dagensSange[state.sangIndex];
+    const audio = document.getElementById("afspiller");
+    audio.src = state.nuvaerendeSang.lyd_url;
+    render();
+  }
+
+  function spilKlip() {
+    const audio = document.getElementById("afspiller");
+    const varighed = KLIP_TRIN[state.trinIndex];
+    const startpunkt = (state.nuvaerendeSang.start_offset_ms || 0) / 1000;
+    clearTimeout(spilTimeout);
+    audio.currentTime = startpunkt;
+    audio.play().catch(e => console.error("Kunne ikke afspille", e));
+    spilTimeout = setTimeout(() => audio.pause(), varighed * 1000);
+  }
+
+  function gaetIndsendt(vaerdi) {
+    if (state.afsloeret) return;
+    const gaet = normaliser(vaerdi);
+    if (gaet.length === 0) return;
+    const sang = state.nuvaerendeSang;
+    const gyldigeTitler = [sang.titel, ...(sang.alternative_titler || [])].map(normaliser);
+    if (gyldigeTitler.includes(gaet)) {
+      afslutSang(state.trinIndex);
+    } else {
+      naesteTrin("forkert");
+    }
+  }
+
+  function springOver() {
+    if (state.afsloeret) return;
+    naesteTrin("sprunget-over");
+  }
+
+  function naesteTrin(besked) {
+    const audio = document.getElementById("afspiller");
+    audio.pause();
+    if (state.trinIndex < KLIP_TRIN.length - 1) {
+      state.trinIndex++;
+      render(besked);
+    } else {
+      afslutSang(null);
+    }
+  }
+
+  function sangIkkeFundet() {
+    registrerResultat(null, 0);
+    naesteSang();
+  }
+
+  function afslutSang(rigtigtTrinIndex) {
+    const audio = document.getElementById("afspiller");
+    audio.pause();
+    state.afsloeret = true;
+    const antalBrugteTrin = rigtigtTrinIndex !== null ? rigtigtTrinIndex + 1 : KLIP_TRIN.length;
+    registrerResultat(rigtigtTrinIndex, antalBrugteTrin);
+    naesteSang();
+  }
+
+  function registrerResultat(rigtigtTrinIndex, antalBrugteTrin) {
+    const sang = state.nuvaerendeSang;
+    const resultat = {
+      titel: sang.titel,
+      kunstner: sang.kunstner,
+      rigtigtTrin: rigtigtTrinIndex,
+      antalBrugteTrin,
+      appleLink: sang.link_ud || null,
+      spotifyLink: spotifySoegeLink(sang),
+    };
+    state.resultater.push(resultat);
+    return resultat;
+  }
+
+  function naesteSang() {
+    state.sangIndex++;
+    if (state.sangIndex >= state.dagensSange.length) {
+      const heltResultat = { dagNummer, sange: state.resultater };
+      gemResultat(heltResultat);
+      renderSamletResultat(heltResultat);
+    } else {
+      startSang();
+    }
+  }
+
+  // ---- Emoji-grid (Wordle/Heardle-stil) ----
+  function genererGrid(resultat) {
+    let grid = "";
+    for (let i = 0; i < KLIP_TRIN.length; i++) {
+      if (resultat.rigtigtTrin !== null && i === resultat.rigtigtTrin) grid += "🟩";
+      else if (i < resultat.antalBrugteTrin) grid += "🟥";
+      else grid += "⬜";
+    }
+    return grid;
+  }
+
+  function genererDelTekst(heltResultat) {
+    const antalGaettet = heltResultat.sange.filter(s => s.rigtigtTrin !== null).length;
+    const linjer = heltResultat.sange.map(genererGrid).join("\n");
+    return `Ørehænger — dagens 5 sange #${heltResultat.dagNummer}\nGættet: ${antalGaettet}/${heltResultat.sange.length} sange\n\n${linjer}`;
+  }
+
+  function kopierResultat() {
+    const gemt = hentGemtResultat();
+    if (!gemt) return;
+    const tekst = genererDelTekst(gemt);
+    const status = document.getElementById("kopi-status");
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(tekst)
+        .then(() => { if (status) status.textContent = "Kopieret!"; })
+        .catch(() => markerTekstTilKopiering(status));
+    } else {
+      markerTekstTilKopiering(status);
+    }
+  }
+
+  function markerTekstTilKopiering(status) {
+    const felt = document.getElementById("del-tekst");
+    if (felt) { felt.focus(); felt.select(); }
+    if (status) status.textContent = "Kunne ikke kopiere automatisk — teksten er markeret, tryk Ctrl/Cmd+C.";
+  }
+
+  // ---- Rendering ----
+  function render(besked) {
+    const sang = state.nuvaerendeSang;
+    const el = document.getElementById("spil");
+    if (!sang) return;
+
+    // Skulle i praksis ikke ske — generatoren tager kun sange med lyd_url
+    // med i sange.json — men et sikkerhedsnet er billigt at have.
+    if (!sang.lyd_url) {
+      el.innerHTML = `
+        <p>Sang ${state.sangIndex + 1} af ${state.dagensSange.length}</p>
+        <p class="fejl">Mangler et lyd-link for "${escapeHtml(sang.titel)}". Springer videre.</p>
+        <button onclick="sangIkkeFundet()">Næste sang</button>
+      `;
+      return;
+    }
+
+    const varighed = KLIP_TRIN[state.trinIndex];
+    let html = `
+      <p>Dagens sange #${dagNummer} — sang ${state.sangIndex + 1} af ${state.dagensSange.length}</p>
+      <p>Klip ${state.trinIndex + 1} af ${KLIP_TRIN.length}: ${varighed} sekund${varighed === 1 ? "" : "er"}</p>
+      <button onclick="spilKlip()">▶ Afspil klip</button>
+    `;
+
+    if (besked === "forkert") html += `<p>Forkert. Næste klip er længere.</p>`;
+    if (besked === "sprunget-over") html += `<p>Sprunget over. Næste klip er længere.</p>`;
+
+    html += `
+      <div>
+        <input id="gaet-input" type="text" placeholder="Skriv en sangtitel…" autocomplete="off"
+               oninput="opdaterForslag(this.value)" onkeydown="haandterTast(event)">
+        <div id="forslag-liste"></div>
+        <button onclick="springOver()">Spring over</button>
+      </div>
+    `;
+
+    el.innerHTML = html;
+    const input = document.getElementById("gaet-input");
+    if (input) {
+      input.focus();
+      opdaterForslag("");
+    }
+  }
+
+  function renderSamletResultat(heltResultat) {
+    const el = document.getElementById("spil");
+    const antalGaettet = heltResultat.sange.filter(s => s.rigtigtTrin !== null).length;
+    const recap = heltResultat.sange.map(s => `
+      <div class="sang-recap">
+        <div class="grid">${genererGrid(s)}</div>
+        <span>${escapeHtml(s.titel)} — ${escapeHtml(s.kunstner)}</span>
+        ${s.appleLink ? ` · <a href="${s.appleLink}" target="_blank" rel="noopener">Apple Music</a>` : ""}
+        · <a href="${s.spotifyLink}" target="_blank" rel="noopener">Spotify</a>
+      </div>
+    `).join("");
+
+    el.innerHTML = `
+      <p><strong>Dagens 5 sange er klaret: ${antalGaettet} ud af ${heltResultat.sange.length} gættet.</strong></p>
+      <textarea id="del-tekst" readonly>${escapeHtml(genererDelTekst(heltResultat))}</textarea>
+      <button onclick="kopierResultat()">Kopiér resultat</button>
+      <span id="kopi-status"></span>
+      <p>Kom tilbage i morgen for fem nye sange.</p>
+      ${recap}
+    `;
+  }
+
+  function renderAlleredeSpillet(heltResultat) {
+    renderSamletResultat(heltResultat);
+    const el = document.getElementById("spil");
+    const p = document.createElement("p");
+    p.textContent = "Du har allerede spillet dagens 5 sange.";
+    el.prepend(p);
+  }
+
+  // ---- Søgefelt med forslag (matcher hele sangpuljen, ikke kun dagens 5) ----
+  function findForslag(tekst) {
+    const q = normaliser(tekst);
+    if (q.length === 0) return [];
+    return SANGE.filter(s => {
+      const felter = [s.titel, s.kunstner, ...(s.alternative_titler || []), ...(s.alternative_kunstnere || [])];
+      return felter.some(f => normaliser(f).includes(q));
+    });
+  }
+
+  function opdaterForslag(tekst) {
+    const liste = document.getElementById("forslag-liste");
+    if (!liste) return;
+    const q = normaliser(tekst);
+    if (q.length === 0) {
+      liste.innerHTML = "";
+      return;
+    }
+    const forslag = findForslag(tekst);
+    if (forslag.length === 0) {
+      liste.innerHTML = `<p class="ingen-match">Ingen sange matcher.</p>`;
+      return;
+    }
+    liste.innerHTML = forslag
+      .map(s => `<button type="button" data-titel="${escapeHtml(s.titel)}" onclick="vaelgForslag(this.dataset.titel)">${escapeHtml(s.titel)} — ${escapeHtml(s.kunstner)}</button>`)
+      .join("");
+  }
+
+  function vaelgForslag(titel) {
+    gaetIndsendt(titel);
+  }
+
+  function haandterTast(event) {
+    if (event.key !== "Enter") return;
+    event.preventDefault();
+    const foersteKnap = document.querySelector("#forslag-liste button");
+    if (foersteKnap) vaelgForslag(foersteKnap.dataset.titel);
+  }
+
+  // Sikkerhedsnet: hvis siden af en eller anden grund aldrig kommer i gang
+  // (uventet fejl, blokeret netværksopslag der ikke fanges undervejs),
+  // skal den ikke hænge fast på "Indlæser…" for evigt uden forklaring.
+  function visOpstartsfejl(detalje) {
+    document.getElementById("spil").innerHTML = `
+      <p class="fejl">Siden kunne ikke starte spillet. Prøv at genindlæse siden.</p>
+      <button onclick="location.reload()">Genindlæs</button>
+      ${detalje ? `<p style="opacity:0.5; font-size:0.85em; margin-top:10px;">Teknisk besked (til fejlsøgning): ${escapeHtml(detalje)}</p>` : ""}
+    `;
+  }
+
+  let opstartFaerdig = false;
+  setTimeout(() => {
+    if (!opstartFaerdig) {
+      visOpstartsfejl("opstarten kom aldrig i gang (15 sekunders sikkerhedsnet udløst)");
+    }
+  }, 15000);
+
+  opsaetLydstyrkeKontrol();
+  start()
+    .then(() => { opstartFaerdig = true; })
+    .catch(e => {
+      opstartFaerdig = true;
+      console.error("Uventet fejl ved opstart", e);
+      visOpstartsfejl(String(e && e.message ? e.message : e));
+    });
+</script>
+
+</body>
+</html>
