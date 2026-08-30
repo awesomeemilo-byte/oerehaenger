@@ -95,14 +95,27 @@
   // det ville rykke rundt på hvilke sange der er "dagens sange" hvilken dag.
   const EPOKE_DATO = "2026-08-30";
 
-  // ---- Dagens dato i dansk tid (ikke UTC — håndterer selv sommertid) ----
+  // Dagens sange skifter kl. 07:00 dansk tid, ikke ved midnat — så nye
+  // sange er klar når folk vågner, i stedet for midt om natten (se
+  // beslutninger.md, 2026-08-30).
+  const SKIFT_KLOKKESLAET_TIMER = 7;
+
+  // ---- "Spildagens" dato i dansk tid, med skift kl. SKIFT_KLOKKESLAET_TIMER
+  // i stedet for ved midnat ----
+  // Simpelt trick: spørg "hvilken dansk kalenderdag var det for N timer
+  // siden" i stedet for "hvilken dansk kalenderdag er det nu". Så bliver
+  // kl. 06:59 stadig regnet som i går, og kl. 07:00 skifter til i dag.
+  // Virker uden en backend og håndterer selv sommertid, ligesom før — det
+  // eneste der er ændret er hvilket klokkeslæt dagen "starter" på.
   function dagensDatoIDanmark() {
+    const nu = new Date();
+    const forskudtTidspunkt = new Date(nu.getTime() - SKIFT_KLOKKESLAET_TIMER * 60 * 60 * 1000);
     return new Intl.DateTimeFormat("en-CA", {
       timeZone: "Europe/Copenhagen",
       year: "numeric",
       month: "2-digit",
       day: "2-digit",
-    }).format(new Date());
+    }).format(forskudtTidspunkt);
   }
 
   function dageMellem(dato1, dato2) {
